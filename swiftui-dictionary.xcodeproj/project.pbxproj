@@ -11,6 +11,7 @@
 		80069495277C3CFF001458F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80069494277C3CFF001458F2 /* ContentView.swift */; };
 		80069497277C3D02001458F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80069496277C3D02001458F2 /* Assets.xcassets */; };
 		8006949A277C3D02001458F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80069499277C3D02001458F2 /* Preview Assets.xcassets */; };
+		800694A1277C3F31001458F2 /* SyncColumnWidthSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800694A0277C3F31001458F2 /* SyncColumnWidthSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		80069494277C3CFF001458F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		80069496277C3D02001458F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80069499277C3D02001458F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		800694A0277C3F31001458F2 /* SyncColumnWidthSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncColumnWidthSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				80069492277C3CFF001458F2 /* swiftui_dictionaryApp.swift */,
 				80069494277C3CFF001458F2 /* ContentView.swift */,
+				800694A0277C3F31001458F2 /* SyncColumnWidthSample.swift */,
 				80069496277C3D02001458F2 /* Assets.xcassets */,
 				80069498277C3D02001458F2 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				80069495277C3CFF001458F2 /* ContentView.swift in Sources */,
 				80069493277C3CFF001458F2 /* swiftui_dictionaryApp.swift in Sources */,
+				800694A1277C3F31001458F2 /* SyncColumnWidthSample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,10 +9,33 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            
+            List(samples) { sample in
+                NavigationLink(sample.title, destination: SyncColumnWidthSample())
+
+            }
+            VStack {
+                
+                NavigationLink("link1", destination: SyncColumnWidthSample())
+                Text("sample2")
+            }
+        }
     }
 }
+
+struct Sample: Identifiable {
+    let id = UUID()
+    let title: String
+    let desinationView: AnyView
+}
+
+let samples:[Sample] = [
+    Sample(title: "SyncColumnWidthSample", desinationView: AnyView(SyncColumnWidthSample())),
+    Sample(title: "sample2", desinationView: AnyView(SyncColumnWidthSample()))
+]
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
