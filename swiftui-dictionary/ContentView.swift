@@ -26,12 +26,13 @@ struct Sample: Identifiable {
 let samples:[Sample] = [
     Sample(title: "SyncColumnWidthSample", desinationView: AnyView(SyncColumnWidthSample())),
     Sample(title: "GeometryPreferenceSample", desinationView: AnyView(GeometryPreferenceSample())),
-    Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample()))
-
+    Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample())),
+    Sample(title: "NestedViewPreferenceSample", desinationView: AnyView(NestedViewPreferenceSample()))
 ]
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+.previewInterfaceOrientation(.landscapeLeft)
     }
 }
