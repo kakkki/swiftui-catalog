@@ -10,15 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            
             List(samples) { sample in
-                NavigationLink(sample.title, destination: SyncColumnWidthSample())
-
-            }
-            VStack {
-                
-                NavigationLink("link1", destination: SyncColumnWidthSample())
-                Text("sample2")
+                NavigationLink(sample.title, destination: sample.desinationView)
             }
         }
     }
@@ -32,10 +25,10 @@ struct Sample: Identifiable {
 
 let samples:[Sample] = [
     Sample(title: "SyncColumnWidthSample", desinationView: AnyView(SyncColumnWidthSample())),
-    Sample(title: "sample2", desinationView: AnyView(SyncColumnWidthSample()))
+    Sample(title: "GeometryPreferenceSample", desinationView: AnyView(GeometryPreferenceSample())),
+    Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample()))
+
 ]
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
