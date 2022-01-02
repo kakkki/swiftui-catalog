@@ -136,6 +136,9 @@ struct NestedViewPreferenceSample: View {
             }
         }
         .background(Color(white: 0.8))
+        // @see https://stackoverflow.com/questions/57517803/how-to-remove-the-default-navigation-bar-space-in-swiftui-navigationview
+        .navigationBarHidden(true)
+        
 //        .edgesIgnoringSafeArea(.all)
     }
 }
@@ -307,5 +310,11 @@ private extension MiniMap {
 struct NestedViewPreferenceSample_Previews: PreviewProvider {
     static var previews: some View {
         NestedViewPreferenceSample()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
+            .previewDisplayName("iPhone 13 Pro Max")
+//        NestedViewPreferenceSample()
+//            .previewDevice(PreviewDevice(rawValue: "iPhone 13"))
+//            .previewDisplayName("iPhone 13")
+
     }
 }
