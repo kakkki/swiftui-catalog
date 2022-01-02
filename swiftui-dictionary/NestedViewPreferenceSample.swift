@@ -78,12 +78,6 @@ struct NestedViewPreferenceSample: View {
                     .anchorPreference(key: MyPreferenceKey.self, value: .bounds) {
                         return [MyPreferenceData(vtype: .miniMapArea, bounds: $0)]
                     }
-//                    .padding(.top, 40.0)
-                
-//                    .padding(.leading, 20.0)
-//                    .padding(.trailing, 20.0)
-//                    .padding(.horizontal, 30)
-                
                 VStack(alignment: .center) {
                     VStack {
                         Text("Hello \(fieldValues[0]) \(fieldValues[1]) \(fieldValues[2])")
@@ -91,16 +85,13 @@ struct NestedViewPreferenceSample: View {
                             .anchorPreference(key: MyPreferenceKey.self, value: .bounds) {
                                 return [MyPreferenceData.init(vtype: .title, bounds: $0)]
                         }
-//                        Divider()
                     }
-
                     // Switch + Slider
                     HStack(alignment: .center) {
                         VStack {
                             Toggle(isOn: $twitterFieldPreset) { Text("") }
                             Text("twitter")
                         }
-
                         Slider(value: $length, in: 40...180).layoutPriority(1)
                     }.padding(10)
 
@@ -115,15 +106,9 @@ struct NestedViewPreferenceSample: View {
                     }
 
                     // Second row of text fields
-//                    MyFormField(fieldValue: $fieldValues[4], label: "Twitter")
-//                        .frame(width: CGFloat(length))
-//                        .opacity(twitterFieldPreset ? 1 : 0)
                    TwitterFormField(fieldValue: $fieldValues[4], label: "Twitter")
                         .frame(width: CGFloat(length))
                         .opacity(twitterFieldPreset ? 1 : 0)
-
-                    
-
                 }.transformAnchorPreference(key: MyPreferenceKey.self, value: .bounds) {
                     $0.append(MyPreferenceData(vtype: .formContainer, bounds: $1))
                 }
@@ -136,9 +121,8 @@ struct NestedViewPreferenceSample: View {
             }
         }
         .background(Color(white: 0.8))
-        // @see https://stackoverflow.com/questions/57517803/how-to-remove-the-default-navigation-bar-space-in-swiftui-navigationview
-        .navigationBarHidden(true)
-        
+        // @see https://stackoverflow.com/questions/57517803/how-to-remove-the-default-navigation-bar-space-in-swiftui-navigationview#answer-57518319
+        .navigationBarTitleDisplayMode(.inline)
 //        .edgesIgnoringSafeArea(.all)
     }
 }
@@ -153,18 +137,13 @@ struct MyFormField: View {
             Text(label)
             TextField("", text: $fieldValue)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .anchorPreference(key: MyPreferenceKey.self, value: .bounds) {
-                    return [MyPreferenceData(vtype: .field(self.fieldValue.count), bounds: $0)]
-                }
+                .modifier(AnchorFieldPreference(fieldValue: $fieldValue))
         }
-//        .frame(width: 200)
         .padding(15)
         .background(RoundedRectangle(cornerRadius: 15).fill(Color(white: 0.9)))
         // ラベルのTextとTextFieldを含んだVStack全体のboundsをtransformAnchorPreferenceで記録する
         // TextFieldのanchorPreferenceでTextFieldのboundsをPreferenceに記録する
-        .transformAnchorPreference(key: MyPreferenceKey.self, value: .bounds) {
-            $0.append(MyPreferenceData(vtype: .fieldContainer, bounds: $1))
-        }
+        .modifier(AnchorFieldContainerPreference())
     }
 }
 
@@ -177,18 +156,53 @@ struct TwitterFormField: View {
             Text(label)
             TextField("", text: $fieldValue)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .anchorPreference(key: MyPreferenceKey.self, value: .bounds) {
-                    return [MyPreferenceData(vtype: .twitterfield(self.fieldValue.count), bounds: $0)]
-                }
+                .modifier(AnchorTwitterFieldPreference(fieldValue: $fieldValue))
         }
         .padding(15)
         .background(RoundedRectangle(cornerRadius: 15).fill(Color(white: 0.9)))
-        .transformAnchorPreference(key: MyPreferenceKey.self, value: .bounds) {
-            $0.append(MyPreferenceData(vtype: .twitterFieldContainer, bounds: $1))
-        }
+        .modifier(AnchorTwitterFieldContainerPreference())
     }
 }
 
+struct AnchorFieldPreference: ViewModifier {
+    @Binding var fieldValue: String
+    
+    func body(content: Content) -> some View {
+        return content
+            .anchorPreference(key: MyPreferenceKey.self, value: .bounds) {
+                return [MyPreferenceData(vtype: .field(self.fieldValue.count), bounds: $0)]
+            }
+    }
+}
+
+struct AnchorFieldContainerPreference: ViewModifier {
+    func body(content: Content) -> some View {
+        return content
+            .transformAnchorPreference(key: MyPreferenceKey.self, value: .bounds) {
+                $0.append(MyPreferenceData(vtype: .fieldContainer, bounds: $1))
+            }
+    }
+}
+
+struct AnchorTwitterFieldPreference: ViewModifier {
+    @Binding var fieldValue: String
+    
+    func body(content: Content) -> some View {
+        return content
+            .anchorPreference(key: MyPreferenceKey.self, value: .bounds) {
+                return [MyPreferenceData(vtype: .twitterfield(self.fieldValue.count), bounds: $0)]
+            }
+    }
+}
+
+struct AnchorTwitterFieldContainerPreference: ViewModifier {
+    func body(content: Content) -> some View {
+        return content
+            .transformAnchorPreference(key: MyPreferenceKey.self, value: .bounds) {
+                $0.append(MyPreferenceData(vtype: .twitterFieldContainer, bounds: $1))
+            }
+    }
+}
 
 struct MiniMap: View {
     let geometry: GeometryProxy
@@ -212,7 +226,8 @@ struct MiniMap: View {
         
         
         // Calcualte a multiplier factor to scale the views from the form, into the minimap.
-        let factor = geometry[formContainerAnchor].size.width / (geometry[miniMapAreaAnchor].size.width - 10.0)
+        let factor = geometry[formContainerAnchor].size.width / (geometry[miniMapAreaAnchor].size.width - 50.0)
+//        let factor = 1.5
         
         // Determine the position of the form
         let containerPosition = CGPoint(x: geometry[formContainerAnchor].minX, y: geometry[formContainerAnchor].minY)
@@ -237,25 +252,6 @@ struct MiniMap: View {
             // Preferences are traversed in reverse order, otherwise the branch views
             // would be covered by their ancestors
             ForEach(preferences.reversed()) { pref in
-                
-                if (pref.vtype == .field(4)) {
-                    let _ = print("debug0000 ===========================================")
-                    let _ = print("debug0000 vtype : \(pref.vtype)")
-                    let _ = print("debug0000 vtype : \(pref.getColor())")
-                    let _ = print("debug0000 origin : \(self.geometry[pref.bounds].origin)")
-                    let _ = print("debug0000 bounds : \(self.geometry[pref.bounds])")
-                    let _ = print("debug0000 -------------------------------------------")
-                    let _ = print("debug0000 minX : \(self.geometry[pref.bounds].minX)")
-                    let _ = print("debug0000 containerPosition.x) : \(containerPosition.x)")
-                    let _ = print("debug0000 factor : \(factor)")
-                    let _ = print("debug0000 miniMapPosition.x, : \(miniMapPosition.x)")
-
-                    let _ = print("debug0000 minY : \(self.geometry[pref.bounds].minY)")
-                    let _ = print("debug0000 containerPosition.y) : \(containerPosition.y)")
-                    let _ = print("debug0000 factor : \(factor)")
-                    let _ = print("debug0000 miniMapPosition.y, : \(miniMapPosition.y)")
-                }
-
                 if pref.show() { // some type of views, we don't want to show
                     switch pref.vtype {
                     case .title:
