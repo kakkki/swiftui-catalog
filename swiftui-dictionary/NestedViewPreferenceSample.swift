@@ -5,6 +5,27 @@
 //  Created by Atsuki Kakehi on 2021/12/29.
 //
 
+/**
+- MyViewType
+- MyPreferenceData
+- MyPreferenceKey
+------
+- NestedViewPreferenceSample
+------
+- MyFormField
+- TwitterFormField
+- AnchorFieldPreference
+- AnchorFieldContainerPreference
+- AnchorTwitterFieldPreference
+- AnchorTwitterFieldContainerPreference
+------
+- MiniMap
+    - miniMapView
+    - rectangleView
+    - titleMapRectangleView
+    - twiiterMapRectangleView
+ */
+
 import SwiftUI
 
 enum MyViewType: Equatable {
@@ -118,6 +139,8 @@ struct NestedViewPreferenceSample: View {
                 GeometryReader { geometry in
                     MiniMap(geometry: geometry, preferences: preferences, twitterFieldPreset: $twitterFieldPreset)
                 }
+                // 画面全体に波及する
+//                .background(.green)
             }
         }
         .background(Color(white: 0.8))
@@ -267,6 +290,9 @@ struct MiniMap: View {
             }
         }.padding(5)
     }
+}
+
+private extension MiniMap {
     
     func rectangleView(_ pref: MyPreferenceData, _ factor: CGFloat, _ containerPosition: CGPoint, _ miniMapPosition: CGPoint, _ titleSize: CGSize) -> some View {
         Rectangle()
@@ -276,10 +302,7 @@ struct MiniMap: View {
         .offset(x: (self.geometry[pref.bounds].minX - containerPosition.x) / factor + miniMapPosition.x,
                 y: (self.geometry[pref.bounds].minY - containerPosition.y) / factor + miniMapPosition.y - titleSize.height * 2)
     }
-}
 
-private extension MiniMap {
-    
     // Mapの中のTitleパーツ用
     func titleMapRectangleView(_ pref: MyPreferenceData, _ factor: CGFloat, _ containerPosition: CGPoint, _ miniMapPosition: CGPoint) -> some View {
         Rectangle()
