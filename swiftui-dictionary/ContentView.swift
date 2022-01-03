@@ -28,7 +28,7 @@ let samples:[Sample] = [
     Sample(title: "GeometryPreferenceSample", desinationView: AnyView(GeometryPreferenceSample())),
     Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample())),
     Sample(title: "NestedViewPreferenceSample", desinationView: AnyView(NestedViewPreferenceSample())),
-    Sample(title: "TrackableScrollViewSample todo implement", desinationView: AnyView(NestedViewPreferenceSample()))
+    Sample(title: "TrackableScrollViewSample todo implement", desinationView: AnyView(TrackableScrollViewSample()))
 ]
 
 struct ContentView_Previews: PreviewProvider {
