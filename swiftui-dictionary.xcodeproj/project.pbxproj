@@ -79,10 +79,7 @@
 			children = (
 				80069492277C3CFF001458F2 /* swiftui_dictionaryApp.swift */,
 				80069494277C3CFF001458F2 /* ContentView.swift */,
-				800694A0277C3F31001458F2 /* SyncColumnWidthSample.swift */,
-				800694A2277C4AC9001458F2 /* GeometryPreferenceSample.swift */,
-				800694A4277C4BB2001458F2 /* AnchorPreferenceSample.swift */,
-				800694A6277C4C83001458F2 /* NestedViewPreferenceSample.swift */,
+				80EE4352278992B800D9C6D1 /* GeometryReaderSamples */,
 				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
 				90AAC19927866EBD000110E4 /* design-code-samples */,
 				80EE434D2789868600D9C6D1 /* DragGestureSamples */,
@@ -117,6 +114,17 @@
 				80EE435027898D9B00D9C6D1 /* DragGestureTwoContainers.swift */,
 			);
 			path = DragGestureSamples;
+			sourceTree = "<group>";
+		};
+		80EE4352278992B800D9C6D1 /* GeometryReaderSamples */ = {
+			isa = PBXGroup;
+			children = (
+				800694A0277C3F31001458F2 /* SyncColumnWidthSample.swift */,
+				800694A2277C4AC9001458F2 /* GeometryPreferenceSample.swift */,
+				800694A4277C4BB2001458F2 /* AnchorPreferenceSample.swift */,
+				800694A6277C4C83001458F2 /* NestedViewPreferenceSample.swift */,
+			);
+			path = GeometryReaderSamples;
 			sourceTree = "<group>";
 		};
 		90AAC19927866EBD000110E4 /* design-code-samples */ = {
