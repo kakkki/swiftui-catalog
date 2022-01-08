@@ -28,6 +28,7 @@ let samples:[Sample] = [
     Sample(title: "GeometryPreferenceSample", desinationView: AnyView(GeometryPreferenceSample())),
     Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample())),
     Sample(title: "NestedViewPreferenceSample", desinationView: AnyView(NestedViewPreferenceSample())),
+    Sample(title: "SetPositionToCenterExample", desinationView: AnyView(SetPositionToCenterExample())),
     Sample(title: "TrackableScrollViewSample todo implement", desinationView: AnyView(TrackableScrollViewSample())),
     Sample(title: "FeaturedItem", desinationView: AnyView(FeaturedItem())),
     Sample(title: "TabbedFeaturedItems", desinationView: AnyView(TabbedFeaturedItems())),
