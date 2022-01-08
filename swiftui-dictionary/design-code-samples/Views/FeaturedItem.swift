@@ -39,20 +39,26 @@ struct FeaturedItem: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(.secondary)
         }
-        .padding(.all, 20.0)
-        .padding(.vertical, 20)
-        .frame(height: 350.0)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
-        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
         .padding(.horizontal, 20)
-        .overlay(
-            Image(course.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 230)
-                .offset(x: 32, y: -80)
-            
-        )
+        .padding(.vertical, 40)
+        .frame(maxWidth: .infinity)
+        .frame(height: 350)
+        .background(.ultraThinMaterial)
+        
+        // overlay画像やshadowは回転させたくないので、FearturedItemの外に出した
+//        .padding(.all, 20.0)
+//        .padding(.vertical, 20)
+//        .frame(height: 350.0)
+//        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
+//        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
+//        .padding(.horizontal, 20)
+//        .overlay(
+//            Image(course.image)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(height: 230)
+//                .offset(x: 32, y: -80)
+//        )
     }
 }
 
