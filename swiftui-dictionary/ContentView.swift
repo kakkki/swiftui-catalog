@@ -28,7 +28,12 @@ let samples:[Sample] = [
     Sample(title: "GeometryPreferenceSample", desinationView: AnyView(GeometryPreferenceSample())),
     Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample())),
     Sample(title: "NestedViewPreferenceSample", desinationView: AnyView(NestedViewPreferenceSample())),
-    Sample(title: "TrackableScrollViewSample todo implement", desinationView: AnyView(TrackableScrollViewSample()))
+    Sample(title: "TrackableScrollViewSample todo implement", desinationView: AnyView(TrackableScrollViewSample())),
+    Sample(title: "FeaturedItem", desinationView: AnyView(FeaturedItem())),
+    Sample(title: "TabbedFeaturedItems", desinationView: AnyView(TabbedFeaturedItems())),
+    Sample(title: "Rotation3DEffectTab", desinationView: AnyView(Rotation3DEffectTab())),
+    Sample(title: "DragGesture Basic", desinationView: AnyView(DragGestureBasic()))
+
 ]
 
 struct ContentView_Previews: PreviewProvider {
