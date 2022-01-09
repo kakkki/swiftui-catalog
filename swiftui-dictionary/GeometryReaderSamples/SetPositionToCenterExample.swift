@@ -11,7 +11,7 @@ import SwiftUI
 
 struct PositionData: Identifiable {
     let id: Int
-    let center: Anchor<CGPoint>
+    let targetPosition: Anchor<CGPoint>
 }
 struct Positions: PreferenceKey {
     static var defaultValue: [PositionData] = []
@@ -24,7 +24,7 @@ struct PositionReader: View {
     let tag: Int
     var body: some View {
         Color.clear.anchorPreference(key: Positions.self, value: .center) { (anchor)  in
-                [PositionData(id: self.tag, center: anchor)]
+                [PositionData(id: self.tag, targetPosition: anchor)]
         }
     }
 }
@@ -64,20 +64,40 @@ struct SetPositionToCenterExample: View {
             }
         }.overlayPreferenceValue(Positions.self) { preferences in
             GeometryReader { proxy in
-                Rectangle().frame(width: 50, height: 50).position( self.getPosition(proxy: proxy, tag: self.tag, preferences: preferences))
+                // 動いてる点
+                Rectangle()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.orange)
+                    .position(
+                        self.getPosition(
+                            proxy: proxy,
+                            tag: self.tag,
+                            preferences: preferences
+                        )
+                    )
             }
         }
     }
     func getPosition(proxy: GeometryProxy, tag: Int, preferences: [PositionData])->CGPoint {
+        let test = preferences.filter(
+            { (p) -> Bool in
+                p.id == tag
+            }
+        )
+        
         let p = preferences.filter({ (p) -> Bool in
             p.id == tag
             })[0]
-        return proxy[p.center]
+        let _ = print("debug0000 : proxy center\(proxy[p.targetPosition])")
+        return proxy[p.targetPosition]
     }
 }
 
 struct SetPositionToCenterExample_Previews: PreviewProvider {
     static var previews: some View {
-        SetPositionToCenterExample()
+        Group {
+            SetPositionToCenterExample()
+            SetPositionToCenterExample()
+        }
     }
 }
