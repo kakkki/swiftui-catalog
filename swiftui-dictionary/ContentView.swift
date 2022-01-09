@@ -33,8 +33,8 @@ let samples:[Sample] = [
     Sample(title: "FeaturedItem", desinationView: AnyView(FeaturedItem())),
     Sample(title: "TabbedFeaturedItems", desinationView: AnyView(TabbedFeaturedItems())),
     Sample(title: "Rotation3DEffectTab", desinationView: AnyView(Rotation3DEffectTab())),
-    Sample(title: "DragGesture Basic", desinationView: AnyView(DragGestureBasic()))
-
+    Sample(title: "DragGesture Basic", desinationView: AnyView(DragGestureBasic())),
+    Sample(title: "DragGestureAutoPositionChange", desinationView: AnyView(DragGestureAutoPositionChange()))
 ]
 
 struct ContentView_Previews: PreviewProvider {
