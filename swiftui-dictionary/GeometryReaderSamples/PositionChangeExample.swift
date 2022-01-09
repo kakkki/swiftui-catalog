@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/**
+ 1. Viewのidに応じてViewのCenterのCGPointをanchorPreferenceで保存しておく
+ 2. 選択されてるViewが変更されたら、対応するCenterのCGPointを取得する
+ 3. ターゲットのViewのpositionに適応する
+*/
+
 struct RectanglePositions: PreferenceKey {
     // PositionDataはSetPositionToCenterExample.swiftで定義してる
     static var defaultValue: [PositionData] = []
@@ -54,7 +60,7 @@ struct RectangleRow: View {
             Rectangle()
                 .foregroundColor(rectangleColor)
                 .aspectRatio(1, contentMode: .fit)
-                .background(RectanglePositionReader(tag: id))
+                .background(CenterPointRecorder(tag: id))
                 .onTapGesture {
                     currentTag = id
                 }
@@ -62,7 +68,7 @@ struct RectangleRow: View {
             Rectangle()
                 .foregroundColor(rectangleColor)
                 .aspectRatio(1, contentMode: .fit)
-                .background(RectanglePositionReader(tag: id + 1))
+                .background(CenterPointRecorder(tag: id + 1))
                 .onTapGesture {
                     currentTag = id + 1
                 }
@@ -70,7 +76,7 @@ struct RectangleRow: View {
             Rectangle()
                 .foregroundColor(rectangleColor)
                 .aspectRatio(1, contentMode: .fit)
-                .background(RectanglePositionReader(tag: id + 2))
+                .background(CenterPointRecorder(tag: id + 2))
                 .onTapGesture {
                     currentTag = id + 2
                 }
@@ -78,7 +84,7 @@ struct RectangleRow: View {
     }
 }
 
-struct RectanglePositionReader: View {
+struct CenterPointRecorder: View {
     let tag: Int
     
     var body: some View {
