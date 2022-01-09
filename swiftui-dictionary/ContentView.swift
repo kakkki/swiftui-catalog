@@ -24,6 +24,7 @@ struct Sample: Identifiable {
 }
 
 let samples:[Sample] = [
+    Sample(title: "DashedLineSample", desinationView: AnyView(DashedLineSample())),
     Sample(title: "SyncColumnWidthSample", desinationView: AnyView(SyncColumnWidthSample())),
     Sample(title: "GeometryPreferenceSample", desinationView: AnyView(GeometryPreferenceSample())),
     Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample())),
