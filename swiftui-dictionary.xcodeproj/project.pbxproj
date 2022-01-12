@@ -25,6 +25,9 @@
 		80EE43542789933600D9C6D1 /* SetPositionToCenterExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43532789933600D9C6D1 /* SetPositionToCenterExample.swift */; };
 		80EE4356278A9F2900D9C6D1 /* PositionChangeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE4355278A9F2800D9C6D1 /* PositionChangeExample.swift */; };
 		80EE4358278AC50E00D9C6D1 /* DashedLineSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE4357278AC50E00D9C6D1 /* DashedLineSample.swift */; };
+		80F1A532278E919F00FAF56D /* StackLayoutSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A531278E919F00FAF56D /* StackLayoutSample.swift */; };
+		80F1A534278E99C800FAF56D /* LeaningCardSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A533278E99C800FAF56D /* LeaningCardSample.swift */; };
+		80F1A538278E9B8600FAF56D /* LeaningStackSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A537278E9B8600FAF56D /* LeaningStackSample.swift */; };
 		90AAC19B27866F3F000110E4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19A27866F3F000110E4 /* Course.swift */; };
 		90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19C27866FEA000110E4 /* FeaturedItem.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +52,9 @@
 		80EE43532789933600D9C6D1 /* SetPositionToCenterExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPositionToCenterExample.swift; sourceTree = "<group>"; };
 		80EE4355278A9F2800D9C6D1 /* PositionChangeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionChangeExample.swift; sourceTree = "<group>"; };
 		80EE4357278AC50E00D9C6D1 /* DashedLineSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineSample.swift; sourceTree = "<group>"; };
+		80F1A531278E919F00FAF56D /* StackLayoutSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLayoutSample.swift; sourceTree = "<group>"; };
+		80F1A533278E99C800FAF56D /* LeaningCardSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaningCardSample.swift; sourceTree = "<group>"; };
+		80F1A537278E9B8600FAF56D /* LeaningStackSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaningStackSample.swift; sourceTree = "<group>"; };
 		90AAC19A27866F3F000110E4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		90AAC19C27866FEA000110E4 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +96,7 @@
 				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
 				90AAC19927866EBD000110E4 /* design-code-samples */,
 				80EE434D2789868600D9C6D1 /* DragGestureSamples */,
+				80F1A530278E901800FAF56D /* StackLayoutCards */,
 				80069496277C3D02001458F2 /* Assets.xcassets */,
 				80069498277C3D02001458F2 /* Preview Content */,
 			);
@@ -134,6 +141,16 @@
 				80EE4355278A9F2800D9C6D1 /* PositionChangeExample.swift */,
 			);
 			path = GeometryReaderSamples;
+			sourceTree = "<group>";
+		};
+		80F1A530278E901800FAF56D /* StackLayoutCards */ = {
+			isa = PBXGroup;
+			children = (
+				80F1A533278E99C800FAF56D /* LeaningCardSample.swift */,
+				80F1A531278E919F00FAF56D /* StackLayoutSample.swift */,
+				80F1A537278E9B8600FAF56D /* LeaningStackSample.swift */,
+			);
+			path = StackLayoutCards;
 			sourceTree = "<group>";
 		};
 		90AAC19927866EBD000110E4 /* design-code-samples */ = {
@@ -233,6 +250,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F1A534278E99C800FAF56D /* LeaningCardSample.swift in Sources */,
+				80F1A538278E9B8600FAF56D /* LeaningStackSample.swift in Sources */,
 				80069495277C3CFF001458F2 /* ContentView.swift in Sources */,
 				80069493277C3CFF001458F2 /* swiftui_dictionaryApp.swift in Sources */,
 				90AAC19B27866F3F000110E4 /* Course.swift in Sources */,
@@ -249,6 +268,7 @@
 				800694A5277C4BB2001458F2 /* AnchorPreferenceSample.swift in Sources */,
 				80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */,
 				80EE4356278A9F2900D9C6D1 /* PositionChangeExample.swift in Sources */,
+				80F1A532278E919F00FAF56D /* StackLayoutSample.swift in Sources */,
 				80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */,
 				80EE435127898D9B00D9C6D1 /* DragGestureAutoPositionChange.swift in Sources */,
 			);
