@@ -42,14 +42,14 @@ let samples:[Sample] = [
     Sample(title: "Rotation3DEffectTab", desinationView: AnyView(Rotation3DEffectTab())),
     Sample(title: "--------------------------------------", desinationView: nil),
     Sample(title: "DragGesture Basic", desinationView: AnyView(DragGestureBasic())),
-    Sample(title: "DragGestureAutoPositionChange", desinationView: AnyView(DragGestureAutoPositionChange())),
+    Sample(title: "DragGestureAutoPositionChange \n AnchorPreferenceによる座標取得とドラッグジェスチャーでの座標による制御処理", desinationView: AnyView(DragGestureAutoPositionChange())),
     Sample(title: "--------------------------------------", desinationView: nil),
     Sample(title: "Replace Animation API from iOS15", desinationView: AnyView(AnimationUpdateSample())),
-    Sample(title: "LeaningCardSample", desinationView: AnyView(LeaningCardSample())),
-    Sample(title: "StackLayoutSample", desinationView: AnyView(StackLayoutSample())),
-    Sample(title: "LeaningStackSample", desinationView: AnyView(LeaningStackSample())),
-    Sample(title: "StackCardsAnimationSample", desinationView: AnyView(StackCardsAnimationSample()))
-
+    Sample(title: "LeaningCardSample \n 斜めのカードUI", desinationView: AnyView(LeaningCardSample())),
+    Sample(title: "StackLayoutSample\n 重なったカードUI", desinationView: AnyView(StackLayoutSample())),
+    Sample(title: "LeaningStackSample\n 斜めのカードが重なったUI", desinationView: AnyView(LeaningStackSample())),
+    Sample(title: "StackCardsAnimationSample \n 重なったカードのアニメーション", desinationView: AnyView(StackCardsAnimationSample())),
+    Sample(title: "StackCardsAnimationAndDragGestureSample \n 重なったカードのアニメーション&ドラッグジェスチャー ", desinationView: AnyView(StackCardsAnimationAndDragGestureSample()))
 ]
 
 struct ContentView_Previews: PreviewProvider {

@@ -30,6 +30,7 @@
 		80F1A538278E9B8600FAF56D /* LeaningStackSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A537278E9B8600FAF56D /* LeaningStackSample.swift */; };
 		80F1A53A278E9E3300FAF56D /* StackCardsAnimationSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A539278E9E3300FAF56D /* StackCardsAnimationSample.swift */; };
 		80F1A53C278EA29000FAF56D /* AnimationUpdateSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A53B278EA29000FAF56D /* AnimationUpdateSample.swift */; };
+		80F1A53E278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A53D278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift */; };
 		90AAC19B27866F3F000110E4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19A27866F3F000110E4 /* Course.swift */; };
 		90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19C27866FEA000110E4 /* FeaturedItem.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		80F1A537278E9B8600FAF56D /* LeaningStackSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaningStackSample.swift; sourceTree = "<group>"; };
 		80F1A539278E9E3300FAF56D /* StackCardsAnimationSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardsAnimationSample.swift; sourceTree = "<group>"; };
 		80F1A53B278EA29000FAF56D /* AnimationUpdateSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUpdateSample.swift; sourceTree = "<group>"; };
+		80F1A53D278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardsAnimationAndDragGestureSample.swift; sourceTree = "<group>"; };
 		90AAC19A27866F3F000110E4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		90AAC19C27866FEA000110E4 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				80F1A531278E919F00FAF56D /* StackLayoutSample.swift */,
 				80F1A537278E9B8600FAF56D /* LeaningStackSample.swift */,
 				80F1A539278E9E3300FAF56D /* StackCardsAnimationSample.swift */,
+				80F1A53D278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift */,
 				80F1A53B278EA29000FAF56D /* AnimationUpdateSample.swift */,
 			);
 			path = StackLayoutCards;
@@ -277,6 +280,7 @@
 				80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */,
 				80EE4356278A9F2900D9C6D1 /* PositionChangeExample.swift in Sources */,
 				80F1A532278E919F00FAF56D /* StackLayoutSample.swift in Sources */,
+				80F1A53E278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift in Sources */,
 				80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */,
 				80EE435127898D9B00D9C6D1 /* DragGestureAutoPositionChange.swift in Sources */,
 			);
