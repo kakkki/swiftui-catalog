@@ -36,7 +36,9 @@ let samples:[Sample] = [
     Sample(title: "TabbedFeaturedItems", desinationView: AnyView(TabbedFeaturedItems())),
     Sample(title: "Rotation3DEffectTab", desinationView: AnyView(Rotation3DEffectTab())),
     Sample(title: "DragGesture Basic", desinationView: AnyView(DragGestureBasic())),
-    Sample(title: "DragGestureAutoPositionChange", desinationView: AnyView(DragGestureAutoPositionChange()))
+    Sample(title: "DragGestureAutoPositionChange", desinationView: AnyView(DragGestureAutoPositionChange())),
+    Sample(title: "Replace Animation API from iOS15", desinationView: AnyView(AnimationUpdateSample()))
+
 ]
 
 struct ContentView_Previews: PreviewProvider {
