@@ -16,7 +16,11 @@ import SwiftUI
         -> DragGesture.onEndedのvalue.startLocation.y + value.translation.heightでheithtの判定ができた
  2. 判定されたコンテナの対象のCGPointにpositionを変更する
     (PositionChangeExampleを参考に)
- */
+ 
+ 
+ 
+https://sarunw.com/posts/move-view-around-with-drag-gesture-in-swiftui/
+*/
 
 struct DragGestureAutoPositionChange: View {
     @State var position = CGSize(width: 200, height: 300)
@@ -36,8 +40,8 @@ struct DragGestureAutoPositionChange: View {
 
                 // 固定値でひとまず検証
                 // 紫エリアの一番左の枠の中心に自動配置する処理
-                if (value.startLocation.y + value.translation.height >= 616.0) {
-                    self.position = CGSize(width: 88.0, height: 718.0)
+                if (value.startLocation.y + value.translation.height >= 510.0) {
+                    self.position = CGSize(width: 85.0, height: 615.0)
                 }
             }
     }
@@ -49,19 +53,25 @@ struct DragGestureAutoPositionChange: View {
                     .foregroundColor(.orange)
                     .frame(height: 200)
                     .background(ContainerReader(id: 1))
+                    .shadow(color: Color("Shadow").opacity(0.3), radius: 30, x: 0, y: 10)
+                    .blur(radius: 2)
+
                 Rectangle()
-                    .foregroundColor(.green)
-                    .frame(height: 400)
+                    .foregroundColor(.clear)
+                    .frame(height: 300)
                     .background(ContainerReader(id: 2))
                 
                 ZStack {
                     Rectangle()
-                        .foregroundColor(.purple)
+                        .foregroundColor(.black)
                         .frame(height: 200)
                         .background(ContainerReader(id: 3))
-                    
+                        .shadow(color: Color("Shadow").opacity(0.3), radius: 30, x: 0, y: 10)
+                        .blur(radius: 2)
+
                     // サンプルとして赤線枠を描画
                     HStack {
+                        // https://betterprogramming.pub/swiftui-rectangle-61e782daa283
                         Rectangle()
                             .stroke(.red)
                             .frame(width: 100, height: 100, alignment: .topLeading)
@@ -78,7 +88,6 @@ struct DragGestureAutoPositionChange: View {
                     }
                 }
             }
-                
             Text("Image Center x: \(position.width)")
                 .position(x: 200, y: 100)
             Text("Image Center y: \(position.height)")
@@ -88,11 +97,14 @@ struct DragGestureAutoPositionChange: View {
             // 1. このRectangleの中心点を描画したい
             // anchorPreferenceを使えばCenterのCGPointが取れるので簡単
             Rectangle()
-                .foregroundColor(.blue)
-                .frame(width: 50, height: 50)
+                .foregroundColor(.white)
+                .background(.ultraThinMaterial)
+                .cornerRadius(10)
+                .frame(width: 100, height: 100)
+                .shadow(color: Color("Shadow").opacity(0.3), radius: 30, x: 0, y: 20)
+                .blur(radius: 1)
                 .position(x: position.width, y: position.height)
                 .gesture(drag)
-
             // 2. 各Containerのどれかにドラッグした場合に、左上から順番に、
             // コンテナ内の決められた座標にViewを配置orアニメーションする動きを作りたい
             // -> ドラッグジェスチャーでメモを管理できるアプリができそう
