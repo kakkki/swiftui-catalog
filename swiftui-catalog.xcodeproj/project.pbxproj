@@ -37,7 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8006948F277C3CFF001458F2 /* swiftui-dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8006948F277C3CFF001458F2 /* swiftui-catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80069492277C3CFF001458F2 /* swiftui_dictionaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_dictionaryApp.swift; sourceTree = "<group>"; };
 		80069494277C3CFF001458F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		80069496277C3D02001458F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		80069486277C3CFF001458F2 = {
 			isa = PBXGroup;
 			children = (
-				80069491277C3CFF001458F2 /* swiftui-dictionary */,
+				80069491277C3CFF001458F2 /* swiftui-catalog */,
 				80069490277C3CFF001458F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,12 +89,12 @@
 		80069490277C3CFF001458F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8006948F277C3CFF001458F2 /* swiftui-dictionary.app */,
+				8006948F277C3CFF001458F2 /* swiftui-catalog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		80069491277C3CFF001458F2 /* swiftui-dictionary */ = {
+		80069491277C3CFF001458F2 /* swiftui-catalog */ = {
 			isa = PBXGroup;
 			children = (
 				80069492277C3CFF001458F2 /* swiftui_dictionaryApp.swift */,
@@ -108,7 +108,7 @@
 				80069496277C3D02001458F2 /* Assets.xcassets */,
 				80069498277C3D02001458F2 /* Preview Content */,
 			);
-			path = "swiftui-dictionary";
+			path = "swiftui-catalog";
 			sourceTree = "<group>";
 		};
 		80069498277C3D02001458F2 /* Preview Content */ = {
@@ -195,9 +195,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8006948E277C3CFF001458F2 /* swiftui-dictionary */ = {
+		8006948E277C3CFF001458F2 /* swiftui-catalog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8006949D277C3D02001458F2 /* Build configuration list for PBXNativeTarget "swiftui-dictionary" */;
+			buildConfigurationList = 8006949D277C3D02001458F2 /* Build configuration list for PBXNativeTarget "swiftui-catalog" */;
 			buildPhases = (
 				8006948B277C3CFF001458F2 /* Sources */,
 				8006948C277C3CFF001458F2 /* Frameworks */,
@@ -207,9 +207,9 @@
 			);
 			dependencies = (
 			);
-			name = "swiftui-dictionary";
+			name = "swiftui-catalog";
 			productName = "swiftui-dictionary";
-			productReference = 8006948F277C3CFF001458F2 /* swiftui-dictionary.app */;
+			productReference = 8006948F277C3CFF001458F2 /* swiftui-catalog.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8006948A277C3CFF001458F2 /* Build configuration list for PBXProject "swiftui-dictionary" */;
+			buildConfigurationList = 8006948A277C3CFF001458F2 /* Build configuration list for PBXProject "swiftui-catalog" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -240,7 +240,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8006948E277C3CFF001458F2 /* swiftui-dictionary */,
+				8006948E277C3CFF001458F2 /* swiftui-catalog */,
 			);
 		};
 /* End PBXProject section */
@@ -416,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"swiftui-dictionary/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"swiftui-catalog/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -429,7 +429,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftui.dictionary.swiftui-dictionary";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftui.catalog.swiftui-catalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -444,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"swiftui-dictionary/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"swiftui-catalog/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -457,7 +457,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftui.dictionary.swiftui-dictionary";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftui.catalog.swiftui-catalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -468,7 +468,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8006948A277C3CFF001458F2 /* Build configuration list for PBXProject "swiftui-dictionary" */ = {
+		8006948A277C3CFF001458F2 /* Build configuration list for PBXProject "swiftui-catalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8006949B277C3D02001458F2 /* Debug */,
@@ -477,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8006949D277C3D02001458F2 /* Build configuration list for PBXNativeTarget "swiftui-dictionary" */ = {
+		8006949D277C3D02001458F2 /* Build configuration list for PBXNativeTarget "swiftui-catalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8006949E277C3D02001458F2 /* Debug */,
