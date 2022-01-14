@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8006948E277C3CFF001458F2"
-               BuildableName = "swiftui-dictionary.app"
+               BuildableName = "swiftui-catalog.app"
                BlueprintName = "swiftui-catalog"
                ReferencedContainer = "container:swiftui-catalog.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8006948E277C3CFF001458F2"
-            BuildableName = "swiftui-dictionary.app"
+            BuildableName = "swiftui-catalog.app"
             BlueprintName = "swiftui-catalog"
             ReferencedContainer = "container:swiftui-catalog.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8006948E277C3CFF001458F2"
-            BuildableName = "swiftui-dictionary.app"
+            BuildableName = "swiftui-catalog.app"
             BlueprintName = "swiftui-catalog"
             ReferencedContainer = "container:swiftui-catalog.xcodeproj">
          </BuildableReference>

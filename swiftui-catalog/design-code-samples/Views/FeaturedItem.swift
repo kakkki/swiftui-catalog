@@ -1,6 +1,6 @@
 //
 //  FeaturedItem.swift
-//  swiftui-dictionary
+//  swiftui-catalog
 //
 //  Created by 筧敦気 on 2022/01/06.
 //

@@ -1,6 +1,6 @@
 //
 //  StackCardsAnimationAndDragGestureSample.swift
-//  swiftui-dictionary
+//  swiftui-catalog
 //
 //  Created by Atsuki Kakehi on 2022/01/12.
 //

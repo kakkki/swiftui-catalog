@@ -1,6 +1,6 @@
 //
 //  SyncColumnWidthSample.swift
-//  swiftui-dictionary
+//  swiftui-catalog
 //
 //  Created by Atsuki Kakehi on 2021/12/29.
 //
