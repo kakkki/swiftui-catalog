@@ -31,7 +31,6 @@ struct LeaningStackSample: View {
                 .rotation3DEffect(Angle(degrees: 5), axis: (x: 10.0, y: 0, z: 0))
                 .blendMode(.hardLight)
         }
-
     }
 }
 
