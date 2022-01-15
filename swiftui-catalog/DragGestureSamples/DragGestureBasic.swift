@@ -10,7 +10,7 @@ import SwiftUI
 struct DragGestureBasic: View {
     @State var position = CGSize(width: 200, height: 300)
     
-    var drag: some Gesture {
+    private var drag: some Gesture {
         DragGesture()
             .onChanged { value in
                 self.position = CGSize(

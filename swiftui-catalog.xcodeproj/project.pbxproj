@@ -32,6 +32,8 @@
 		80F1A53A278E9E3300FAF56D /* StackCardsAnimationSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A539278E9E3300FAF56D /* StackCardsAnimationSample.swift */; };
 		80F1A53C278EA29000FAF56D /* AnimationUpdateSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A53B278EA29000FAF56D /* AnimationUpdateSample.swift */; };
 		80F1A53E278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1A53D278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift */; };
+		80F35C3C2792521B006B0368 /* TaskDragSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C3B2792521B006B0368 /* TaskDragSample.swift */; };
+		80F35C3E27925FC9006B0368 /* EditableListSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C3D27925FC9006B0368 /* EditableListSample.swift */; };
 		90AAC19B27866F3F000110E4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19A27866F3F000110E4 /* Course.swift */; };
 		90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19C27866FEA000110E4 /* FeaturedItem.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		80F1A539278E9E3300FAF56D /* StackCardsAnimationSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardsAnimationSample.swift; sourceTree = "<group>"; };
 		80F1A53B278EA29000FAF56D /* AnimationUpdateSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUpdateSample.swift; sourceTree = "<group>"; };
 		80F1A53D278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardsAnimationAndDragGestureSample.swift; sourceTree = "<group>"; };
+		80F35C3B2792521B006B0368 /* TaskDragSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDragSample.swift; sourceTree = "<group>"; };
+		80F35C3D27925FC9006B0368 /* EditableListSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableListSample.swift; sourceTree = "<group>"; };
 		90AAC19A27866F3F000110E4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		90AAC19C27866FEA000110E4 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +104,7 @@
 				80069492277C3CFF001458F2 /* SwiftUICatalogApp.swift */,
 				80069494277C3CFF001458F2 /* ContentView.swift */,
 				80EE4357278AC50E00D9C6D1 /* DashedLineSample.swift */,
+				80F35C3D27925FC9006B0368 /* EditableListSample.swift */,
 				80EE4352278992B800D9C6D1 /* GeometryReaderSamples */,
 				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
 				90AAC19927866EBD000110E4 /* design-code-samples */,
@@ -134,6 +139,7 @@
 			children = (
 				80EE434E2789869B00D9C6D1 /* DragGestureBasic.swift */,
 				80EE435027898D9B00D9C6D1 /* DragGestureAutoPositionChange.swift */,
+				80F35C3B2792521B006B0368 /* TaskDragSample.swift */,
 			);
 			path = DragGestureSamples;
 			sourceTree = "<group>";
@@ -266,11 +272,13 @@
 				80F1A53C278EA29000FAF56D /* AnimationUpdateSample.swift in Sources */,
 				80F1A538278E9B8600FAF56D /* LeaningStackSample.swift in Sources */,
 				80069495277C3CFF001458F2 /* ContentView.swift in Sources */,
+				80F35C3C2792521B006B0368 /* TaskDragSample.swift in Sources */,
 				80069493277C3CFF001458F2 /* SwiftUICatalogApp.swift in Sources */,
 				90AAC19B27866F3F000110E4 /* Course.swift in Sources */,
 				80EE434A27897D1F00D9C6D1 /* TabbedFeaturedItems.swift in Sources */,
 				80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */,
 				800694A7277C4C83001458F2 /* NestedViewPreferenceSample.swift in Sources */,
+				80F35C3E27925FC9006B0368 /* EditableListSample.swift in Sources */,
 				800694A3277C4AC9001458F2 /* GeometryPreferenceSample.swift in Sources */,
 				90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */,
 				80EE4358278AC50E00D9C6D1 /* DashedLineSample.swift in Sources */,
