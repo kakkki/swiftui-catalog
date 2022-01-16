@@ -60,70 +60,59 @@ private struct Sample2: View {
     private let screenHeight = UIScreen.main.bounds.size.height
     
     var body: some View {
-        ZStack() {
+        // 別にZStackを使ってなくても、ドラッグした時に他のコンテンツ下に隠れたりしなくなった
+        // positionじゃなくてoffsetを使うようにしたから？
+        VStack(alignment: .leading) {
             Rectangle()
-                .frame(height: 500)
+                .frame(height: 200)
                 .foregroundColor(Color("card2"))
                 .opacity(0.3)
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .blendMode(.hardLight)
-                .position(x: screenWidthCenter, y: 250)
-                
 
+            SampleCard()
+            SampleCard()
+            SampleCard()
 
             // @see https://stackoverflow.com/questions/61493788/how-to-position-views-relative-to-their-top-left-corner-in-swiftui
-            // 画面上下にコンテンツを詰めるのに必要
+            // 画面の上側にコンテンツを詰めるのに必要
             Spacer()
-
-            
-            
-            SampleCard()
-                .padding(.top, 10)
-                .offset(x: 0 + 10, y: 500)
-
-            SampleCard()
-                .padding(.top, 10)
-                .offset(x: 200 + 10 + 10, y: 500)
-
-            SampleCard()
-                .padding(.top, 20)
-                .offset(x: 0 + 10, y: 600)
-
-            SampleCard()
-                .padding(.top, 20)
-                .offset(x: 200 + 10 + 10, y: 600)
         }
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 private struct SampleCard: View {
+    @State var translationSize = CGSize.zero
 
-    @State var position = CGSize(width: 100, height: 50)
-
-    private var drag: some Gesture {
+    private var newDrag: some Gesture {
         DragGesture()
             .onChanged { value in
-                self.position = CGSize(
-                    width: value.startLocation.x + value.translation.width,
-                    height: value.startLocation.y + value.translation.height
-                )
+                self.translationSize = value.translation
+            }
+            .onEnded { value in
+                self.translationSize = .zero
             }
     }
 
     var body: some View {
-        Text("シャンプー買う")
-            .foregroundColor(.white)
-            .font(.headline)
-            .frame(width: 200, height: 100)
-            .background(Color("card4"))
-            .cornerRadius(20)
-            .shadow(radius: 20)
-            .aspectRatio(1, contentMode: .fit)
-            .blendMode(.hardLight)
-            .position(x: self.position.width, y: self.position.height)
-            .gesture(drag)
+        ZStack {
+            Text("シャンプー買う")
+                .foregroundColor(.white)
+                .font(.headline)
+                .frame(width: 200, height: 100)
+                .background(Color("card4"))
+                .cornerRadius(20)
+                .shadow(radius: 20)
+                .aspectRatio(1, contentMode: .fit)
+                .blendMode(.hardLight)
+        }
+        // TextのModifierとしてoffsetすると、
+        // 文字列だけが動いてしまってframe全体は動かない
+        // なのでZStackごと動くように、ZStackのModifierとしてoffsetしてる
+        .offset(x: translationSize.width, y: translationSize.height)
+        .gesture(newDrag)
     }
 }
 

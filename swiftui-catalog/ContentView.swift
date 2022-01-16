@@ -26,12 +26,17 @@ struct Sample: Identifiable {
 }
 
 let samples:[Sample] = [
+    Sample(title: "---next Todo-------------------------", desinationView: nil),
+    Sample(title: "Overlayの検証", desinationView: AnyView(DragGestureBasic())),
+    Sample(title: "Modalの検証", desinationView: AnyView(DragGestureBasic())),
+    Sample(title: "---DragGesture-------------------------", desinationView: nil),
     Sample(title: "DragGesture Basic", desinationView: AnyView(DragGestureBasic())),
     Sample(title: "DragGestureAutoPositionChange \n AnchorPreferenceによる座標取得とドラッグジェスチャーでの座標による制御処理", desinationView: AnyView(DragGestureAutoPositionChange())),
+    Sample(title: "positionを使わないことでコンテンツサイズを超える大きさでの領域で描画されるのを防ぐ", desinationView: AnyView(DragGestureNotUsePosition())),
     Sample(title: "TaskDragSample", desinationView: AnyView(TaskDragSample())),
     Sample(title: "--------------------------------------", desinationView: nil),
     Sample(title: "EditableListSample", desinationView: AnyView(EditableListSample())),
-    Sample(title: "------- GR ---------------------", desinationView: nil),
+    Sample(title: "--- GR ------------------------", desinationView: nil),
     Sample(title: "SyncColumnWidthSample", desinationView: AnyView(SyncColumnWidthSample())),
     Sample(title: "GeometryPreferenceSample", desinationView: AnyView(GeometryPreferenceSample())),
     Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample())),
@@ -53,6 +58,7 @@ let samples:[Sample] = [
     Sample(title: "StackCardsAnimationAndDragGestureSample \n 重なったカードのアニメーション&ドラッグジェスチャー ", desinationView: AnyView(StackCardsAnimationAndDragGestureSample())),
     Sample(title: "--------------------------------------", desinationView: nil),
     Sample(title: "DashedLineSample", desinationView: AnyView(DashedLineSample())),
+    Sample(title: "LayoutUsingSpacerSample", desinationView: AnyView(LayoutUsingSpacerSample())),
 
 ]
 

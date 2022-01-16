@@ -9,7 +9,19 @@ import SwiftUI
 
 struct LayoutUsingSpacerSample: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Top Text")
+                    .font(.system(size: 20))
+                    .fontWeight(.medium)
+
+                Text("Bottom Text")
+                    .font(.system(size: 12))
+                    .fontWeight(.regular)
+                Spacer()
+            }
+            Spacer()
+        }
     }
 }
 
