@@ -36,6 +36,7 @@
 		80F35C3E27925FC9006B0368 /* EditableListSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C3D27925FC9006B0368 /* EditableListSample.swift */; };
 		80F35C4027940A01006B0368 /* LayoutUsingSpacerSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */; };
 		80F35C4227940E77006B0368 /* DragGestureNotUsePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C4127940E77006B0368 /* DragGestureNotUsePosition.swift */; };
+		80F35C442795A689006B0368 /* OverlayViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C432795A689006B0368 /* OverlayViewSample.swift */; };
 		90AAC19B27866F3F000110E4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19A27866F3F000110E4 /* Course.swift */; };
 		90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19C27866FEA000110E4 /* FeaturedItem.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		80F35C3D27925FC9006B0368 /* EditableListSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableListSample.swift; sourceTree = "<group>"; };
 		80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutUsingSpacerSample.swift; sourceTree = "<group>"; };
 		80F35C4127940E77006B0368 /* DragGestureNotUsePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureNotUsePosition.swift; sourceTree = "<group>"; };
+		80F35C432795A689006B0368 /* OverlayViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewSample.swift; sourceTree = "<group>"; };
 		90AAC19A27866F3F000110E4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		90AAC19C27866FEA000110E4 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				80EE4357278AC50E00D9C6D1 /* DashedLineSample.swift */,
 				80F35C3D27925FC9006B0368 /* EditableListSample.swift */,
 				80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */,
+				80F35C432795A689006B0368 /* OverlayViewSample.swift */,
 				80EE4352278992B800D9C6D1 /* GeometryReaderSamples */,
 				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
 				90AAC19927866EBD000110E4 /* design-code-samples */,
@@ -289,6 +292,7 @@
 				80F35C4227940E77006B0368 /* DragGestureNotUsePosition.swift in Sources */,
 				800694A3277C4AC9001458F2 /* GeometryPreferenceSample.swift in Sources */,
 				90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */,
+				80F35C442795A689006B0368 /* OverlayViewSample.swift in Sources */,
 				80EE4358278AC50E00D9C6D1 /* DashedLineSample.swift in Sources */,
 				80EE43542789933600D9C6D1 /* SetPositionToCenterExample.swift in Sources */,
 				80EE434F2789869B00D9C6D1 /* DragGestureBasic.swift in Sources */,
