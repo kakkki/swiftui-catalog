@@ -43,6 +43,17 @@ struct CardsGroupSample: View {
     var body: some View {
         VStack(spacing: 60) {
             Spacer()
+            
+            /**
+             TODO: どのCardsGroupを選択しても、画面全体での同じ座標でカードを展開する
+             
+             Hint:
+             ・CardsGroupごとにAnchorPreferenceで、bodyにおけるboundsが取得できる
+             ・そのboundsでCardsGroup内で、進んでしまってる分引いてあげれば、毎回同じ座標を起点に展開できそう
+             ・AnchorPreferenceSampleではbody直下のRectangleを移動させてた
+                <-> 今回はCardsGroup内のViewを移動させる
+             */
+            
             HStack(spacing: 10) {
                 CardsGroup(id: 1, signal: $signal)
                 CardsGroup(id: 2, signal: $signal)
