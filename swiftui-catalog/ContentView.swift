@@ -9,11 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            NavigationView {
-                List(samples) { sample in
-                    NavigationLink(sample.title, destination: sample.desinationView)
-                }
+        NavigationView {
+            List(samples) { sample in
+                NavigationLink(sample.title, destination: sample.desinationView)
             }
         }
     }
@@ -26,15 +24,15 @@ struct Sample: Identifiable {
 }
 
 let samples:[Sample] = [
-    Sample(title: "---next Todo-------------------------", desinationView: nil),
-    Sample(title: "Overlayの検証", desinationView: AnyView(DragGestureBasic())),
-    Sample(title: "Modalの検証", desinationView: AnyView(DragGestureBasic())),
+    Sample(title: "✨⭐️Sample Components⭐️✨ -----", desinationView: nil),
+    Sample(title: "CardsGroup\n展開するカードのグループパーツ", desinationView: AnyView(CardsGroup())),
+    Sample(title: "StackCardsDragSample\nスタックしてるカードをタップしてドラッグする部品ができた", desinationView: AnyView(StackCardsDragSample())),
+    Sample(title: "🔲✅next Todo✅🔲 -----", desinationView: nil),
     Sample(title: "---DragGesture-------------------------", desinationView: nil),
     Sample(title: "DragGesture Basic", desinationView: AnyView(DragGestureBasic())),
     Sample(title: "DragGestureAutoPositionChange \n AnchorPreferenceによる座標取得とドラッグジェスチャーでの座標による制御処理", desinationView: AnyView(DragGestureAutoPositionChange())),
     Sample(title: "positionを使わないことでコンテンツサイズを超える大きさでの領域で描画されるのを防ぐ", desinationView: AnyView(DragGestureNotUsePosition())),
     Sample(title: "TaskDragSample", desinationView: AnyView(TaskDragSample())),
-    Sample(title: "StackCardsDragSample\nスタックしてるカードをタップしてドラッグする部品ができた", desinationView: AnyView(StackCardsDragSample())),
     Sample(title: "---汎用的-----------------------------------", desinationView: nil),
     Sample(title: "VStackSpacerLayoutSample", desinationView: AnyView(VStackSpacerLayoutSample())),
     Sample(title: "EditableListSample", desinationView: AnyView(EditableListSample())),
@@ -61,7 +59,7 @@ let samples:[Sample] = [
     Sample(title: "--------------------------------------", desinationView: nil),
     Sample(title: "DashedLineSample", desinationView: AnyView(DashedLineSample())),
     Sample(title: "LayoutUsingSpacerSample", desinationView: AnyView(LayoutUsingSpacerSample())),
-
+    Sample(title: "Overlayの検証", desinationView: AnyView(DragGestureBasic())),
 ]
 
 struct ContentView_Previews: PreviewProvider {

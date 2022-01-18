@@ -12,9 +12,7 @@ struct TextCardsStackSample: View {
     @State private var show = false
 
     var body: some View {
-        
         VStack {
-            
             Text("sample")
                 .frame(width: 340, height: 200)
                 .background(Color("card2"))
@@ -26,7 +24,6 @@ struct TextCardsStackSample: View {
             Rectangle()
                 .frame(width: .infinity, height: 40)
                 .foregroundColor(.clear)
-
 
             ZStack {
                 Text("sample")
@@ -41,7 +38,6 @@ struct TextCardsStackSample: View {
                     .offset(x: 0, y: 0)
                     .blendMode(.hardLight)
                     .animation(.easeInOut(duration: 0.5), value: show)
-                
 
                 Text("Hello2")
                     .frame(width: 340, height: 220)
@@ -55,7 +51,6 @@ struct TextCardsStackSample: View {
                     .rotation3DEffect(Angle(degrees: 10), axis: (x: 10.0, y: 0, z: 0))
                     .blendMode(.hardLight)
                     .animation(.easeInOut(duration: 0.5), value: show)
-
 
                 Text("Hello1")
                     .frame(width: 340, height: 220)
@@ -72,10 +67,7 @@ struct TextCardsStackSample: View {
                     }
             }
             .offset(x: 0, y: 100)
-
         }
-        
-
     }
 }
 
