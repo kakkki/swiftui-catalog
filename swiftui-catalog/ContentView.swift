@@ -25,7 +25,7 @@ struct Sample: Identifiable {
 
 let samples:[Sample] = [
     Sample(title: "✨⭐️Sample Components⭐️✨ -----", desinationView: nil),
-    Sample(title: "CardsGroup\n展開するカードのグループパーツ", desinationView: AnyView(CardsGroup())),
+    Sample(title: "CardsGroupSample\n展開するカードのグループパーツ", desinationView: AnyView(CardsGroupSample())),
     Sample(title: "StackCardsDragSample\nスタックしてるカードをタップしてドラッグする部品ができた", desinationView: AnyView(StackCardsDragSample())),
     Sample(title: "🔲✅next Todo✅🔲 -----", desinationView: nil),
     Sample(title: "---DragGesture-------------------------", desinationView: nil),

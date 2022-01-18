@@ -39,7 +39,7 @@
 		80F35C442795A689006B0368 /* OverlayViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C432795A689006B0368 /* OverlayViewSample.swift */; };
 		80FE046027964C4D002AE55A /* StackCardsDragSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE045F27964C4D002AE55A /* StackCardsDragSample.swift */; };
 		80FE046227964C7F002AE55A /* VStackSpacerLayoutSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */; };
-		80FE046427965690002AE55A /* CardsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE046327965690002AE55A /* CardsGroup.swift */; };
+		80FE046427965690002AE55A /* CardsGroupSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE046327965690002AE55A /* CardsGroupSample.swift */; };
 		90AAC19B27866F3F000110E4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19A27866F3F000110E4 /* Course.swift */; };
 		90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19C27866FEA000110E4 /* FeaturedItem.swift */; };
 /* End PBXBuildFile section */
@@ -78,7 +78,7 @@
 		80F35C432795A689006B0368 /* OverlayViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewSample.swift; sourceTree = "<group>"; };
 		80FE045F27964C4D002AE55A /* StackCardsDragSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardsDragSample.swift; sourceTree = "<group>"; };
 		80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStackSpacerLayoutSample.swift; sourceTree = "<group>"; };
-		80FE046327965690002AE55A /* CardsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsGroup.swift; sourceTree = "<group>"; };
+		80FE046327965690002AE55A /* CardsGroupSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsGroupSample.swift; sourceTree = "<group>"; };
 		90AAC19A27866F3F000110E4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		90AAC19C27866FEA000110E4 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				80FE045F27964C4D002AE55A /* StackCardsDragSample.swift */,
-				80FE046327965690002AE55A /* CardsGroup.swift */,
+				80FE046327965690002AE55A /* CardsGroupSample.swift */,
 			);
 			path = SampleComponents;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 				90AAC19B27866F3F000110E4 /* Course.swift in Sources */,
 				80EE434A27897D1F00D9C6D1 /* TabbedFeaturedItems.swift in Sources */,
 				80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */,
-				80FE046427965690002AE55A /* CardsGroup.swift in Sources */,
+				80FE046427965690002AE55A /* CardsGroupSample.swift in Sources */,
 				800694A7277C4C83001458F2 /* NestedViewPreferenceSample.swift in Sources */,
 				80F35C3E27925FC9006B0368 /* EditableListSample.swift in Sources */,
 				80F35C4227940E77006B0368 /* DragGestureNotUsePosition.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  CardsGroup.swift
+//  CardsGroupSample.swift
 //  swiftui-catalog
 //
 //  Created by Atsuki Kakehi on 2022/01/18.
@@ -36,7 +36,7 @@ enum TappedResult {
     case unSelect
 }
 
-struct CardsGroup: View {
+struct CardsGroupSample: View {
     
     @State var signal: Signal = .nonSelected
     
@@ -44,25 +44,25 @@ struct CardsGroup: View {
         VStack(spacing: 60) {
             Spacer()
             HStack(spacing: 10) {
-                CardsGroupSample(id: 1, signal: $signal)
-                CardsGroupSample(id: 2, signal: $signal)
-                CardsGroupSample(id: 3, signal: $signal)
+                CardsGroup(id: 1, signal: $signal)
+                CardsGroup(id: 2, signal: $signal)
+                CardsGroup(id: 3, signal: $signal)
             }
             HStack(spacing: 10) {
-                CardsGroupSample(id: 4, signal: $signal)
-                CardsGroupSample(id: 5, signal: $signal)
-                CardsGroupSample(id: 6, signal: $signal)
+                CardsGroup(id: 4, signal: $signal)
+                CardsGroup(id: 5, signal: $signal)
+                CardsGroup(id: 6, signal: $signal)
             }
             HStack(spacing: 10) {
-                CardsGroupSample(id: 7, signal: $signal)
-                CardsGroupSample(id: 8, signal: $signal)
-                CardsGroupSample(id: 9, signal: $signal)
+                CardsGroup(id: 7, signal: $signal)
+                CardsGroup(id: 8, signal: $signal)
+                CardsGroup(id: 9, signal: $signal)
             }
         }
     }
 }
 
-private struct CardsGroupSample: View {
+private struct CardsGroup: View {
     @State private var show = false
     
     var id: Int
@@ -176,6 +176,6 @@ private struct DraggableCard: View {
 }
 struct CardsGroup_Previews: PreviewProvider {
     static var previews: some View {
-        CardsGroup()
+        CardsGroupSample()
     }
 }
