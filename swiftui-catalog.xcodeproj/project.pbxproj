@@ -37,6 +37,8 @@
 		80F35C4027940A01006B0368 /* LayoutUsingSpacerSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */; };
 		80F35C4227940E77006B0368 /* DragGestureNotUsePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C4127940E77006B0368 /* DragGestureNotUsePosition.swift */; };
 		80F35C442795A689006B0368 /* OverlayViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F35C432795A689006B0368 /* OverlayViewSample.swift */; };
+		80FE046027964C4D002AE55A /* StackCardsDragSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE045F27964C4D002AE55A /* StackCardsDragSample.swift */; };
+		80FE046227964C7F002AE55A /* VStackSpacerLayoutSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */; };
 		90AAC19B27866F3F000110E4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19A27866F3F000110E4 /* Course.swift */; };
 		90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAC19C27866FEA000110E4 /* FeaturedItem.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutUsingSpacerSample.swift; sourceTree = "<group>"; };
 		80F35C4127940E77006B0368 /* DragGestureNotUsePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureNotUsePosition.swift; sourceTree = "<group>"; };
 		80F35C432795A689006B0368 /* OverlayViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewSample.swift; sourceTree = "<group>"; };
+		80FE045F27964C4D002AE55A /* StackCardsDragSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardsDragSample.swift; sourceTree = "<group>"; };
+		80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStackSpacerLayoutSample.swift; sourceTree = "<group>"; };
 		90AAC19A27866F3F000110E4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		90AAC19C27866FEA000110E4 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,11 +117,13 @@
 				80F35C3D27925FC9006B0368 /* EditableListSample.swift */,
 				80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */,
 				80F35C432795A689006B0368 /* OverlayViewSample.swift */,
+				80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */,
 				80EE4352278992B800D9C6D1 /* GeometryReaderSamples */,
 				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
 				90AAC19927866EBD000110E4 /* design-code-samples */,
 				80EE434D2789868600D9C6D1 /* DragGestureSamples */,
 				80F1A530278E901800FAF56D /* StackLayoutCards */,
+				80FE045E27964C25002AE55A /* SampleComponents */,
 				80069496277C3D02001458F2 /* Assets.xcassets */,
 				80069498277C3D02001458F2 /* Preview Content */,
 			);
@@ -178,6 +184,14 @@
 				80F1A53B278EA29000FAF56D /* AnimationUpdateSample.swift */,
 			);
 			path = StackLayoutCards;
+			sourceTree = "<group>";
+		};
+		80FE045E27964C25002AE55A /* SampleComponents */ = {
+			isa = PBXGroup;
+			children = (
+				80FE045F27964C4D002AE55A /* StackCardsDragSample.swift */,
+			);
+			path = SampleComponents;
 			sourceTree = "<group>";
 		};
 		90AAC19927866EBD000110E4 /* design-code-samples */ = {
@@ -280,6 +294,7 @@
 				80F1A534278E99C800FAF56D /* LeaningCardSample.swift in Sources */,
 				80F1A53C278EA29000FAF56D /* AnimationUpdateSample.swift in Sources */,
 				80F1A538278E9B8600FAF56D /* LeaningStackSample.swift in Sources */,
+				80FE046227964C7F002AE55A /* VStackSpacerLayoutSample.swift in Sources */,
 				80069495277C3CFF001458F2 /* ContentView.swift in Sources */,
 				80F35C4027940A01006B0368 /* LayoutUsingSpacerSample.swift in Sources */,
 				80F35C3C2792521B006B0368 /* TaskDragSample.swift in Sources */,
@@ -306,6 +321,7 @@
 				80F1A532278E919F00FAF56D /* StackLayoutSample.swift in Sources */,
 				80F1A53E278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift in Sources */,
 				80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */,
+				80FE046027964C4D002AE55A /* StackCardsDragSample.swift in Sources */,
 				80EE435127898D9B00D9C6D1 /* DragGestureAutoPositionChange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
