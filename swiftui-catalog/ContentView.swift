@@ -34,6 +34,7 @@ let samples:[Sample] = [
     Sample(title: "DragGestureAutoPositionChange \n AnchorPreferenceによる座標取得とドラッグジェスチャーでの座標による制御処理", desinationView: AnyView(DragGestureAutoPositionChange())),
     Sample(title: "positionを使わないことでコンテンツサイズを超える大きさでの領域で描画されるのを防ぐ", desinationView: AnyView(DragGestureNotUsePosition())),
     Sample(title: "TaskDragSample", desinationView: AnyView(TaskDragSample())),
+    Sample(title: "StackCardsDragSample\nスタックしてるカードをタップしてドラッグする部品ができた", desinationView: AnyView(StackCardsDragSample())),
     Sample(title: "---汎用的-----------------------------------", desinationView: nil),
     Sample(title: "VStackSpacerLayoutSample", desinationView: AnyView(VStackSpacerLayoutSample())),
     Sample(title: "EditableListSample", desinationView: AnyView(EditableListSample())),

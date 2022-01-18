@@ -57,39 +57,6 @@ struct StackCardsDragSample: View {
                 .onTapGesture {
                     self.show.toggle()
                 }
-
-                
-//                Text("Hello3")
-//                    .frame(width: 340, height: 200)
-//                    .background(Color("card2"))
-//                    .cornerRadius(20)
-//                    .shadow(radius: 20)
-//                    .offset(x: 0, y: show ? -350 : -80)
-//                    .scaleEffect(0.85)
-//                    .offset(x: 0, y: 0)
-//                    .blendMode(.hardLight)
-//                    .animation(.easeInOut(duration: 0.5), value: show)
-//                Text("Hello2")
-//                    .frame(width: 340, height: 220)
-//                    .background(Color("card4"))
-//                    .opacity(0.5)
-//                    .cornerRadius(20)
-//                    .shadow(radius: 20)
-//                    .offset(x: 0, y: show ? -200 : -40)
-//                    .scaleEffect(0.9)
-//                    .blendMode(.hardLight)
-//                    .animation(.easeInOut(duration: 0.5), value: show)
-//
-//                Text("Hello1")
-//                    .frame(width: 340, height: 220)
-//                    .background(Color("card3"))
-//                    .cornerRadius(20)
-//                    .shadow(radius: 20)
-//                    .scaleEffect(0.95)
-//                    .blendMode(.hardLight)
-//                    .onTapGesture {
-//                        self.show.toggle()
-//                    }
             }
 
             Text("StackCardsDragSample")
