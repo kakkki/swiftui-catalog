@@ -28,6 +28,15 @@ private enum Signal {
             return id == int ? false : true
         }
     }
+    
+    func shouldBlur() -> Bool {
+        switch self {
+        case .nonSelected:
+            return false
+        case .groupSelected(let int):
+            return true
+        }
+    }
 }
 
 private enum TappedResult {
@@ -42,7 +51,7 @@ struct CardsGroupSample: View {
     @State fileprivate var preferenceDataList: [CardsFolderPreferenceData] = []
     
     var body: some View {
-        VStack(spacing: 60) {
+        VStack() {
             Rectangle()
                 .foregroundColor(.orange)
 //                .frame(height: 200)
@@ -63,12 +72,18 @@ struct CardsGroupSample: View {
                 CardsGroup(id: 2, signal: $signal, preferenceDataList: $preferenceDataList)
                 CardsGroup(id: 3, signal: $signal, preferenceDataList: $preferenceDataList)
             }
+            .padding(.leading, 10)
+            
+            Spacer()
+                .frame(height: 60)
+            
             HStack(spacing: 10) {
                 CardsGroup(id: 4, signal: $signal, preferenceDataList: $preferenceDataList)
                 CardsGroup(id: 5, signal: $signal, preferenceDataList: $preferenceDataList)
                 CardsGroup(id: 6, signal: $signal, preferenceDataList: $preferenceDataList)
             }
-            
+            .padding(.leading, 10)
+
             ZStack {
                 Rectangle()
                     .foregroundColor(.blue)
@@ -77,6 +92,7 @@ struct CardsGroupSample: View {
                     .foregroundColor(.blue)
             }
             .frame(height: 80)
+            .blur(radius: self.signal.shouldBlur() ? 2 : 0)
         }
 
         .onPreferenceChange(CardsFolderPreferenceKey.self) { preferences in
@@ -246,6 +262,7 @@ private struct CardsGroup: View {
             }
             .blur(radius: self.signal.shouldBlur(id) ? 2 : 0)
         }
+        .frame(width: 120, height: 100)
 
     }
 }
