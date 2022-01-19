@@ -64,13 +64,18 @@ struct CardsGroupSample: View {
         VStack() {
             Rectangle()
                 .foregroundColor(.orange)
-//                .frame(height: 200)
                 .opacity(0.2)
             
             HStack(spacing: 10) {
                 CardsGroup(id: 1, signal: $signal, preferenceDataList: $preferenceDataList)
+                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
+                    .animation(.easeInOut(duration: 0.5))
+
                 CardsGroup(id: 2, signal: $signal, preferenceDataList: $preferenceDataList)
+                
                 CardsGroup(id: 3, signal: $signal, preferenceDataList: $preferenceDataList)
+                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
+                    .animation(.easeInOut(duration: 0.5))
             }
             .padding(.leading, 10)
 
@@ -79,8 +84,14 @@ struct CardsGroupSample: View {
             
             HStack(spacing: 10) {
                 CardsGroup(id: 4, signal: $signal, preferenceDataList: $preferenceDataList)
+                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
+                    .animation(.easeInOut(duration: 0.5))
                 CardsGroup(id: 5, signal: $signal, preferenceDataList: $preferenceDataList)
+                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
+                    .animation(.easeInOut(duration: 0.5))
                 CardsGroup(id: 6, signal: $signal, preferenceDataList: $preferenceDataList)
+                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
+                    .animation(.easeInOut(duration: 0.5))
             }
             .padding(.leading, 10)
 
@@ -190,7 +201,7 @@ private struct CardsGroup: View {
                     scale: 0.9,
                     heightOffsetOnHide: -45,
                     heightOffsetOnShow: calculateOffsetY(
-                        goalY: 100,
+                        goalY: 160,
                         groupId: id,
                         preferences: preferenceDataList
                     ),
@@ -209,7 +220,7 @@ private struct CardsGroup: View {
                     scale: 0.9,
                     heightOffsetOnHide: -45,
                     heightOffsetOnShow: calculateOffsetY(
-                        goalY: 100,
+                        goalY: 160,
                         groupId: id,
                         preferences: preferenceDataList
                     ),
@@ -284,7 +295,11 @@ private struct CardsGroup: View {
                     color: Color("card3"),
                     scale: 1.0,
                     heightOffsetOnHide: 0,
-                    heightOffsetOnShow: 0,
+                    heightOffsetOnShow: calculateOffsetY(
+                        goalY: -120,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    ),
                     widthOffsetOnShow: 0
                 )
                 .onTapGesture {
@@ -346,7 +361,7 @@ private struct CardsGroup: View {
             break
         }
         
-        return goalY - abs(basePreference.rect.minY - targetPreference!.rect.minY) - abs(space)
+        return goalY - abs(basePreference.rect.minY - targetPreference!.rect.minY) + abs(space)
     }
 }
 
