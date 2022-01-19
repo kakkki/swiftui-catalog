@@ -41,29 +41,30 @@ struct GeometryPreferenceSample: View {
                         self.activeIdx = 0
                     }
                     .padding()
-                    Circle()
-                        .fill(Color.pink)
-                        .frame(width: 150, height: 150)
-                        .background(BGView(idx: 1))
-                        .onTapGesture {
-                            self.isStarted = true
-                            self.activeIdx = 1
-                        }
-                        .padding()
-                }
-                .onPreferenceChange(CirclePreferenceKey.self) {  preference in
-                    for p in preference {
-                        self.rects[p.idx] = p.rect
+                Circle()
+                    .fill(Color.pink)
+                    .frame(width: 150, height: 150)
+                    .background(BGView(idx: 1))
+                    .onTapGesture {
+                        self.isStarted = true
+                        self.activeIdx = 1
                     }
+                    .padding()
+            }
+            .onPreferenceChange(CirclePreferenceKey.self) {  preference in
+                for p in preference {
+                    self.rects[p.idx] = p.rect
                 }
+            }
 
-Circle()
-    .stroke(Color.blue, lineWidth: 10)
-    .frame(width: rects[activeIdx].size.width, height: rects[activeIdx].size.height)
-    .offset(x: rects[activeIdx].minX , y: rects[activeIdx].minY)
-    .animation(.linear(duration: isStarted ? 0.5 : 0))
+            Circle()
+                .stroke(Color.blue, lineWidth: 10)
+                .frame(width: rects[activeIdx].size.width, height: rects[activeIdx].size.height)
+                .offset(x: rects[activeIdx].minX , y: rects[activeIdx].minY)
+                .animation(.linear(duration: isStarted ? 0.5 : 0))
+        }
+        .coordinateSpace(name: "myCoordination")
 
-        }.coordinateSpace(name: "myCoordination")
     }
 }
 

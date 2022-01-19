@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Signal {
+private enum Signal {
     case nonSelected
     case groupSelected(Int)
 
@@ -30,7 +30,7 @@ enum Signal {
     }
 }
 
-enum TappedResult {
+private enum TappedResult {
     case nothing
     case select
     case unSelect
@@ -38,11 +38,15 @@ enum TappedResult {
 
 struct CardsGroupSample: View {
     
-    @State var signal: Signal = .nonSelected
+    @State fileprivate var signal: Signal = .nonSelected
+    @State fileprivate var preferenceDataList: [CardsFolderPreferenceData] = []
     
     var body: some View {
         VStack(spacing: 60) {
-            Spacer()
+            Rectangle()
+                .foregroundColor(.orange)
+//                .frame(height: 200)
+                .opacity(0.2)
             
             /**
              TODO: どのCardsGroupを選択しても、画面全体での同じ座標でカードを展開する
@@ -53,23 +57,54 @@ struct CardsGroupSample: View {
              ・AnchorPreferenceSampleではbody直下のRectangleを移動させてた
                 <-> 今回はCardsGroup内のViewを移動させる
              */
+
+            HStack(spacing: 10) {
+                CardsGroup(id: 1, signal: $signal, preferenceDataList: $preferenceDataList)
+                CardsGroup(id: 2, signal: $signal, preferenceDataList: $preferenceDataList)
+                CardsGroup(id: 3, signal: $signal, preferenceDataList: $preferenceDataList)
+            }
+            HStack(spacing: 10) {
+                CardsGroup(id: 4, signal: $signal, preferenceDataList: $preferenceDataList)
+                CardsGroup(id: 5, signal: $signal, preferenceDataList: $preferenceDataList)
+                CardsGroup(id: 6, signal: $signal, preferenceDataList: $preferenceDataList)
+            }
             
-            HStack(spacing: 10) {
-                CardsGroup(id: 1, signal: $signal)
-                CardsGroup(id: 2, signal: $signal)
-                CardsGroup(id: 3, signal: $signal)
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.blue)
+                    .opacity(0.2)
+                Text("// TODO: ページングボタン実装")
+                    .foregroundColor(.blue)
             }
-            HStack(spacing: 10) {
-                CardsGroup(id: 4, signal: $signal)
-                CardsGroup(id: 5, signal: $signal)
-                CardsGroup(id: 6, signal: $signal)
+            .frame(height: 80)
+        }
+
+        .onPreferenceChange(CardsFolderPreferenceKey.self) { preferences in
+            // @see https://swiftui-lab.com/state-changes/
+            // [SwiftUI] Modifying state during view update, this will cause undefined behavior.
+            // AnchorPreferenceを使用するとGeometryReader内で値を取得するので
+            // Viewを生成するコードブロックの中で値を取得して、ViewのStateを更新するという処理になる
+            // Viewを生成する処理の中でViewのStateを更新する処理を書くと、
+            // Viewの評価 -> Stateの更新 -> Viewの再評価 という無限ループに入る恐れがあるため
+            // SwiftUIが警告を出す
+       
+            // 今のところの俺の理解では、
+            // Preferenceを使ってStateを更新するような処理がある場合は、
+            // AnchorPreferenceはGeometryReaderが必要でViewの評価中にStateを更新せざるを得なくなるので、
+            // onPreferenceChangeを使って、Viewの評価処理とは独立してPreferenceの変更を検知して処理するようにしたほうが良さそう
+
+            let _ = print("debug0000 preferences.size : \(preferences.count)")
+            let _ = preferences.map {
+                let _ = print(
+                    "debug0000 id : \($0.viewIdx) | minx : \($0.rect.minX) | minY : \($0.rect.minY)"
+                )
             }
-            HStack(spacing: 10) {
-                CardsGroup(id: 7, signal: $signal)
-                CardsGroup(id: 8, signal: $signal)
-                CardsGroup(id: 9, signal: $signal)
+
+            self.preferenceDataList = preferences.map {
+                CardsFolderPreferenceData(viewIdx: $0.viewIdx, rect: $0.rect)
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -78,71 +113,156 @@ private struct CardsGroup: View {
     
     var id: Int
     @Binding var signal: Signal
+    @Binding var preferenceDataList: [CardsFolderPreferenceData]
 
     var body: some View {
-        ZStack {
-            DraggableCard(
-                show: $show,
-                text: "Hello5",
-                color: Color("card1"),
-                scale: 0.80,
-                heightOffsetOnHide: -45,
-                heightOffsetOnShow: -200
+        
+        // ついにそれぞれのCardGroupが、global座標空間における全てのカードの座標を取得できた
+        let _ = preferenceDataList.map {
+            let _ = print(
+                "debug0000 in CardsGroup id : \($0.viewIdx) | minx : \($0.rect.minX) | minY : \($0.rect.minY)"
             )
-                .rotationEffect(Angle.degrees(30))
-
-            DraggableCard(
-                show: $show,
-                text: "Hello4",
-                color: Color("card2"),
-                scale: 0.80,
-                heightOffsetOnHide: -40,
-                heightOffsetOnShow: -200
-            )
-                .rotationEffect(Angle.degrees(20))
-            
-            DraggableCard(
-                show: $show,
-                text: "Hello3",
-                color: Color("card2"),
-                scale: 0.85,
-                heightOffsetOnHide: -30,
-                heightOffsetOnShow: -200
-            )
-                .rotationEffect(Angle.degrees(10))
-            
-            DraggableCard(
-                show: $show,
-                text: "Hello2",
-                color: Color("card4"),
-                scale: 0.9,
-                heightOffsetOnHide: -20,
-                heightOffsetOnShow: -200
-            )
-                .rotationEffect(Angle.degrees(5))
-
-            // Front Card
-            DraggableCard(
-                show: $show,
-                text: "Hello1",
-                color: Color("card3"),
-                scale: 1.0,
-                heightOffsetOnHide: 0,
-                heightOffsetOnShow: 0
-            )
-            .onTapGesture {
-                switch self.signal.tappedResult(id) {
-                case .nothing: break
-                case .select:
-                    self.show.toggle()
-                    self.signal = .groupSelected(id)
-                case .unSelect:
-                    self.show.toggle()
-                    self.signal = .nonSelected
-                }
-            }
         }
-        .blur(radius: self.signal.shouldBlur(id) ? 2 : 0)
+
+        GeometryReader { geometry in
+            ZStack {
+    //            DraggableCard(
+    //                show: $show,
+    //                text: "Hello5",
+    //                color: Color("card1"),
+    //                scale: 0.80,
+    //                heightOffsetOnHide: -45,
+    //                heightOffsetOnShow: -200
+    //            )
+    //            .rotationEffect(Angle.degrees(30))
+    //
+    //            DraggableCard(
+    //                show: $show,
+    //                text: "Hello4",
+    //                color: Color("card2"),
+    //                scale: 0.80,
+    //                heightOffsetOnHide: -40,
+    //                heightOffsetOnShow: -200
+    //            )
+    //            .rotationEffect(Angle.degrees(20))
+    //
+    //            DraggableCard(
+    //                show: $show,
+    //                text: "Hello3",
+    //                color: Color("card2"),
+    //                scale: 0.85,
+    //                heightOffsetOnHide: -30,
+    //                heightOffsetOnShow: -200
+    //            )
+    //            .rotationEffect(Angle.degrees(10))
+    //
+    //            DraggableCard(
+    //                show: $show,
+    //                text: "Hello2",
+    //                color: Color("card4"),
+    //                scale: 0.9,
+    //                heightOffsetOnHide: -20,
+    //                heightOffsetOnShow: -200
+    //            )
+    //            .rotationEffect(Angle.degrees(5))
+
+                // 5枚目
+                DraggableCard(
+                    show: $show,
+                    text: "Hello6",
+                    color: Color("card1"),
+                    scale: 0.9,
+                    heightOffsetOnHide: -45,
+                    heightOffsetOnShow: -219,
+                    widthOffsetOnShow: 144
+                )
+
+                // 4枚目
+                DraggableCard(
+                    show: $show,
+                    text: "Hello5",
+                    color: Color("card1"),
+                    scale: 0.9,
+                    heightOffsetOnHide: -45,
+                    heightOffsetOnShow: -219,
+                    widthOffsetOnShow: 0
+                )
+
+                // 3枚目
+                DraggableCard(
+                    show: $show,
+                    text: "Hello4",
+                    color: Color("card2"),
+                    scale: 0.9,
+                    heightOffsetOnHide: -40,
+                    heightOffsetOnShow: -339,
+                    widthOffsetOnShow: 294
+                )
+                
+                // 2枚目
+                DraggableCard(
+                    show: $show,
+                    text: "Hello3",
+                    color: Color("card2"),
+                    scale: 0.9,
+                    heightOffsetOnHide: -30,
+                    heightOffsetOnShow: -339,
+                    widthOffsetOnShow: 144
+                )
+                            
+                // 1枚目
+                DraggableCard(
+                    show: $show,
+                    text: "Hello2",
+                    color: Color("card4"),
+                    scale: 0.9,
+                    heightOffsetOnHide: -20,
+                    heightOffsetOnShow: -339,
+                    widthOffsetOnShow: 0
+                )
+                
+                // Front Card
+                DraggableCard(
+                    show: $show,
+                    text: "Hello1",
+                    color: Color("card3"),
+                    scale: 1.0,
+                    heightOffsetOnHide: 0,
+                    heightOffsetOnShow: 0,
+                    widthOffsetOnShow: 0
+                )
+                .onTapGesture {
+                    switch self.signal.tappedResult(id) {
+                    case .nothing: break
+                    case .select:
+                        self.show.toggle()
+                        self.signal = .groupSelected(id)
+                    case .unSelect:
+                        self.show.toggle()
+                        self.signal = .nonSelected
+                    }
+                }
+                .preference(key: CardsFolderPreferenceKey.self, value: [CardsFolderPreferenceData(viewIdx: self.id, rect: geometry.frame(in: .global))])
+            }
+            .blur(radius: self.signal.shouldBlur(id) ? 2 : 0)
+        }
+
+    }
+}
+
+// CGRect
+private struct CardsFolderPreferenceData: Equatable {
+    let viewIdx: Int
+    let rect: CGRect
+}
+
+private struct CardsFolderPreferenceKey: PreferenceKey {
+    typealias Value = [CardsFolderPreferenceData]
+
+    static var defaultValue: [CardsFolderPreferenceData] = []
+
+    static func reduce(value: inout [CardsFolderPreferenceData], nextValue: () -> [CardsFolderPreferenceData]) {
+        value.append(contentsOf: nextValue())
     }
 }
 
@@ -153,7 +273,8 @@ private struct DraggableCard: View {
     var scale: CGFloat
     var heightOffsetOnHide: CGFloat
     var heightOffsetOnShow: CGFloat
-    
+    var widthOffsetOnShow: CGFloat
+
     @State var translationSize = CGSize.zero
     private var drag: some Gesture {
         DragGesture()
@@ -176,7 +297,10 @@ private struct DraggableCard: View {
                 .background(color)
                 .cornerRadius(20)
                 .shadow(radius: 10)
-                .offset(x: 0, y: show ? heightOffsetOnShow : heightOffsetOnHide)
+                .offset(
+                    x: show ? widthOffsetOnShow : 0,
+                    y: show ? heightOffsetOnShow : heightOffsetOnHide
+                )
                 .scaleEffect(scale)
                 .blendMode(.hardLight)
                 .animation(.easeInOut(duration: 0.5), value: show)
