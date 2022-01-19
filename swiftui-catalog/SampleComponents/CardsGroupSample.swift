@@ -5,6 +5,16 @@
 //  Created by Atsuki Kakehi on 2022/01/18.
 //
 
+/** TODO
+ Groupの位置毎に計算してx,yの配置をできるようになったけど、
+ 他のGroupと見た目が被って見栄えが悪い
+ 
+ 器を作ってその上に配置するみたいなことができないか
+ zindexとか使って
+ https://developer.apple.com/documentation/swiftui/view/zindex(_:)
+ 
+ */
+
 import SwiftUI
 
 private enum Signal {
@@ -57,23 +67,13 @@ struct CardsGroupSample: View {
 //                .frame(height: 200)
                 .opacity(0.2)
             
-            /**
-             TODO: どのCardsGroupを選択しても、画面全体での同じ座標でカードを展開する
-             
-             Hint:
-             ・CardsGroupごとにAnchorPreferenceで、bodyにおけるboundsが取得できる
-             ・そのboundsでCardsGroup内で、進んでしまってる分引いてあげれば、毎回同じ座標を起点に展開できそう
-             ・AnchorPreferenceSampleではbody直下のRectangleを移動させてた
-                <-> 今回はCardsGroup内のViewを移動させる
-             */
-
             HStack(spacing: 10) {
                 CardsGroup(id: 1, signal: $signal, preferenceDataList: $preferenceDataList)
                 CardsGroup(id: 2, signal: $signal, preferenceDataList: $preferenceDataList)
                 CardsGroup(id: 3, signal: $signal, preferenceDataList: $preferenceDataList)
             }
             .padding(.leading, 10)
-            
+
             Spacer()
                 .frame(height: 60)
             
@@ -189,8 +189,16 @@ private struct CardsGroup: View {
                     color: Color("card1"),
                     scale: 0.9,
                     heightOffsetOnHide: -45,
-                    heightOffsetOnShow: -219,
-                    widthOffsetOnShow: 144
+                    heightOffsetOnShow: calculateOffsetY(
+                        goalY: 100,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    ),
+                    widthOffsetOnShow: calculateOffsetX(
+                        goalX: 144,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    )
                 )
 
                 // 4枚目
@@ -200,8 +208,16 @@ private struct CardsGroup: View {
                     color: Color("card1"),
                     scale: 0.9,
                     heightOffsetOnHide: -45,
-                    heightOffsetOnShow: -219,
-                    widthOffsetOnShow: 0
+                    heightOffsetOnShow: calculateOffsetY(
+                        goalY: 100,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    ),
+                    widthOffsetOnShow: calculateOffsetX(
+                        goalX: 0,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    )
                 )
 
                 // 3枚目
@@ -211,8 +227,16 @@ private struct CardsGroup: View {
                     color: Color("card2"),
                     scale: 0.9,
                     heightOffsetOnHide: -40,
-                    heightOffsetOnShow: -339,
-                    widthOffsetOnShow: 294
+                    heightOffsetOnShow: calculateOffsetY(
+                        goalY: 0,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    ),
+                    widthOffsetOnShow: calculateOffsetX(
+                        goalX: 294,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    )
                 )
                 
                 // 2枚目
@@ -222,8 +246,16 @@ private struct CardsGroup: View {
                     color: Color("card2"),
                     scale: 0.9,
                     heightOffsetOnHide: -30,
-                    heightOffsetOnShow: -339,
-                    widthOffsetOnShow: 144
+                    heightOffsetOnShow: calculateOffsetY(
+                        goalY: 0,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    ),
+                    widthOffsetOnShow: calculateOffsetX(
+                        goalX: 144,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    )
                 )
                             
                 // 1枚目
@@ -233,8 +265,16 @@ private struct CardsGroup: View {
                     color: Color("card4"),
                     scale: 0.9,
                     heightOffsetOnHide: -20,
-                    heightOffsetOnShow: -339,
-                    widthOffsetOnShow: 0
+                    heightOffsetOnShow: calculateOffsetY(
+                        goalY: 0,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    ),
+                    widthOffsetOnShow: calculateOffsetX(
+                        goalX: 0,
+                        groupId: id,
+                        preferences: preferenceDataList
+                    )
                 )
                 
                 // Front Card
@@ -264,6 +304,49 @@ private struct CardsGroup: View {
         }
         .frame(width: 120, height: 100)
 
+    }
+    
+    // 何枚目か
+    // Groupのid
+    // A - (29 - x)
+    // B - (544 - y)
+    // A, Bは置きたいポイント
+    // x, yはそのグループの位置
+    func calculateOffsetX(goalX: CGFloat, groupId: Int, preferences: [CardsFolderPreferenceData]) -> CGFloat {
+        guard preferences.count > 0 else { return 0.0 }
+        let basePreference = preferences[0]
+        let targetPreference = preferences.first(where: { $0.viewIdx == groupId })
+        var space = 0.0
+        switch groupId {
+        case 1, 4:
+            break
+        case 2, 5:
+            space = 10.0
+        case 3, 6:
+            space = 20.0
+        default:
+            break
+        }
+        print("debug0000 groupId : \(groupId) | basePreference.rect.minX : \(basePreference.rect.minX) | targetPreference!.rect.minX : \(targetPreference!.rect.minX)")
+        
+        return goalX - abs(basePreference.rect.minX - targetPreference!.rect.minX) - abs(space)
+    }
+    
+    func calculateOffsetY(goalY: CGFloat, groupId: Int, preferences: [CardsFolderPreferenceData]) -> CGFloat {
+        guard preferences.count > 0 else { return 0.0 }
+        let basePreference = preferences[0]
+        let targetPreference = preferences.first(where: { $0.viewIdx == groupId })
+        var space = 0.0
+        switch groupId {
+        case 1, 2, 3:
+            break
+        case 4, 5, 6:
+            space = 10.0
+        default:
+            break
+        }
+        
+        return goalY - abs(basePreference.rect.minY - targetPreference!.rect.minY) - abs(space)
     }
 }
 
