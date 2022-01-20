@@ -68,14 +68,10 @@ struct CardsGroupSample: View {
             
             HStack(spacing: 10) {
                 CardsGroup(id: 1, signal: $signal, preferenceDataList: $preferenceDataList)
-                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
-                    .animation(.easeInOut(duration: 0.5))
 
                 CardsGroup(id: 2, signal: $signal, preferenceDataList: $preferenceDataList)
                 
                 CardsGroup(id: 3, signal: $signal, preferenceDataList: $preferenceDataList)
-                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
-                    .animation(.easeInOut(duration: 0.5))
             }
             .padding(.leading, 10)
 
@@ -84,14 +80,8 @@ struct CardsGroupSample: View {
             
             HStack(spacing: 10) {
                 CardsGroup(id: 4, signal: $signal, preferenceDataList: $preferenceDataList)
-                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
-                    .animation(.easeInOut(duration: 0.5))
                 CardsGroup(id: 5, signal: $signal, preferenceDataList: $preferenceDataList)
-                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
-                    .animation(.easeInOut(duration: 0.5))
                 CardsGroup(id: 6, signal: $signal, preferenceDataList: $preferenceDataList)
-                    .opacity(self.signal.shouldBlur() ? 0.0 : 1)
-                    .animation(.easeInOut(duration: 0.5))
             }
             .padding(.leading, 10)
 
@@ -316,6 +306,9 @@ private struct CardsGroup: View {
                 .preference(key: CardsFolderPreferenceKey.self, value: [CardsFolderPreferenceData(viewIdx: self.id, rect: geometry.frame(in: .global))])
             }
             .blur(radius: self.signal.shouldBlur(id) ? 2 : 0)
+            .opacity(self.signal.shouldBlur(id) ? 0.0 : 1)
+            .animation(.easeInOut(duration: 0.5))
+
         }
         .frame(width: 120, height: 100)
 
