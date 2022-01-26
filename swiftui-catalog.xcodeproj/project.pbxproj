@@ -17,6 +17,7 @@
 		800694A7277C4C83001458F2 /* NestedViewPreferenceSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800694A6277C4C83001458F2 /* NestedViewPreferenceSample.swift */; };
 		806F8C7F27912B64009651D6 /* TextCardsStackSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806F8C7E27912B64009651D6 /* TextCardsStackSample.swift */; };
 		8078EFB82797AD12004C2A75 /* CoordinateSpaceAndDragSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078EFB72797AD12004C2A75 /* CoordinateSpaceAndDragSample.swift */; };
+		8078EFBB27A12627004C2A75 /* CarouselCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078EFBA27A12627004C2A75 /* CarouselCatalog.swift */; };
 		80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */; };
 		80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */; };
 		80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43442782EA5000D9C6D1 /* AccountBackground.swift */; };
@@ -57,6 +58,7 @@
 		800694A6277C4C83001458F2 /* NestedViewPreferenceSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedViewPreferenceSample.swift; sourceTree = "<group>"; };
 		806F8C7E27912B64009651D6 /* TextCardsStackSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCardsStackSample.swift; sourceTree = "<group>"; };
 		8078EFB72797AD12004C2A75 /* CoordinateSpaceAndDragSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateSpaceAndDragSample.swift; sourceTree = "<group>"; };
+		8078EFBA27A12627004C2A75 /* CarouselCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCatalog.swift; sourceTree = "<group>"; };
 		80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollViewSample.swift; sourceTree = "<group>"; };
 		80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		80EE43442782EA5000D9C6D1 /* AccountBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		80069491277C3CFF001458F2 /* swiftui-catalog */ = {
 			isa = PBXGroup;
 			children = (
+				8078EFB927A125FD004C2A75 /* CarouselSamples */,
 				80069492277C3CFF001458F2 /* SwiftUICatalogApp.swift */,
 				80069494277C3CFF001458F2 /* ContentView.swift */,
 				80EE4357278AC50E00D9C6D1 /* DashedLineSample.swift */,
@@ -149,6 +152,14 @@
 				8078EFB72797AD12004C2A75 /* CoordinateSpaceAndDragSample.swift */,
 			);
 			path = CoordinateSpaceSamples;
+			sourceTree = "<group>";
+		};
+		8078EFB927A125FD004C2A75 /* CarouselSamples */ = {
+			isa = PBXGroup;
+			children = (
+				8078EFBA27A12627004C2A75 /* CarouselCatalog.swift */,
+			);
+			path = CarouselSamples;
 			sourceTree = "<group>";
 		};
 		80EE433F2782E71D00D9C6D1 /* TrackableScroll */ = {
@@ -338,6 +349,7 @@
 				80F1A53E278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift in Sources */,
 				80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */,
 				80FE046027964C4D002AE55A /* StackCardsDragSample.swift in Sources */,
+				8078EFBB27A12627004C2A75 /* CarouselCatalog.swift in Sources */,
 				80EE435127898D9B00D9C6D1 /* DragGestureAutoPositionChange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
