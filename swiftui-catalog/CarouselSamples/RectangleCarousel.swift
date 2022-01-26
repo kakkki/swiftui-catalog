@@ -27,6 +27,7 @@ struct RectangleCarousel: View {
                         .padding(.leading, index == 0 ? bodyView.size.width * 0.1 : 0)
                 }
             }
+            // currentIndex変更前のドラッグに対応したアニメーションに必要
             .offset(x: self.dragOffset)
             .offset(x: -CGFloat(self.currentIndex) * (bodyView.size.width * 0.8 + itemPadding))
             .gesture(
