@@ -19,7 +19,8 @@ struct CarouselCatalog: View {
     }
 
     let carouselSamples = [
-        Sample(title: "-----RectangleCarousel -----", desinationView: AnyView(RectangleCarousel())),
+        Sample(title: "--- RectangleCarousel -----", desinationView: AnyView(RectangleCarousel())),
+        Sample(title: "--- InfiniteCarousel -----", desinationView: AnyView(InfiniteCarousel())),
     ]
 }
     

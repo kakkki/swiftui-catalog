@@ -22,6 +22,7 @@
 		8078EFC227A12DAE004C2A75 /* LongPressGestureSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078EFC127A12DAE004C2A75 /* LongPressGestureSample.swift */; };
 		8078EFC427A12DEF004C2A75 /* LongPressGestureSampleSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078EFC327A12DEF004C2A75 /* LongPressGestureSampleSecond.swift */; };
 		80A96F2F27A133E6001F2F5E /* GestureCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F2E27A133E6001F2F5E /* GestureCatalog.swift */; };
+		80A96F3127A1358C001F2F5E /* InfiniteCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3027A1358C001F2F5E /* InfiniteCarousel.swift */; };
 		80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */; };
 		80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */; };
 		80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43442782EA5000D9C6D1 /* AccountBackground.swift */; };
@@ -67,6 +68,7 @@
 		8078EFC127A12DAE004C2A75 /* LongPressGestureSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureSample.swift; sourceTree = "<group>"; };
 		8078EFC327A12DEF004C2A75 /* LongPressGestureSampleSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureSampleSecond.swift; sourceTree = "<group>"; };
 		80A96F2E27A133E6001F2F5E /* GestureCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureCatalog.swift; sourceTree = "<group>"; };
+		80A96F3027A1358C001F2F5E /* InfiniteCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteCarousel.swift; sourceTree = "<group>"; };
 		80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollViewSample.swift; sourceTree = "<group>"; };
 		80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		80EE43442782EA5000D9C6D1 /* AccountBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				8078EFBA27A12627004C2A75 /* CarouselCatalog.swift */,
 				8078EFBC27A12743004C2A75 /* RectangleCarousel.swift */,
+				80A96F3027A1358C001F2F5E /* InfiniteCarousel.swift */,
 			);
 			path = CarouselSamples;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				8078EFC227A12DAE004C2A75 /* LongPressGestureSample.swift in Sources */,
 				80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */,
 				80FE046427965690002AE55A /* CardsGroupSample.swift in Sources */,
+				80A96F3127A1358C001F2F5E /* InfiniteCarousel.swift in Sources */,
 				800694A7277C4C83001458F2 /* NestedViewPreferenceSample.swift in Sources */,
 				80F35C3E27925FC9006B0368 /* EditableListSample.swift in Sources */,
 				80F35C4227940E77006B0368 /* DragGestureNotUsePosition.swift in Sources */,
