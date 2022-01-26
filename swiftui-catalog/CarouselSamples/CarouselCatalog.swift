@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct CarouselCatalog: View {
+    
     var body: some View {
-        NavigationView {
-            List(carouselSamples) { sample in
-                NavigationLink(sample.title, destination: sample.desinationView)
-            }
+        // @see https://stackoverflow.com/questions/58065081/swiftui-double-navigation-bar
+        // ContentViewですでにNavigationViewの中にCarouselCatalogがある
+        // なのでCarouselCatalogの中でNavigationViewを使うと二重になってしまう
+        List(carouselSamples) { sample in
+            NavigationLink(sample.title, destination: sample.desinationView)
         }
     }
 
     let carouselSamples = [
-        Sample(title: "✨⭐️Sample Components⭐️✨ -----", desinationView: nil),
+        Sample(title: "-----RectangleCarousel -----", desinationView: AnyView(RectangleCarousel())),
     ]
 }
     
