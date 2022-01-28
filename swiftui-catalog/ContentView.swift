@@ -24,6 +24,7 @@ struct Sample: Identifiable {
 }
 
 let samples:[Sample] = [
+    Sample(title: "--- CategoryFeatureList-----", desinationView: AnyView(CategoryFeatureList())),
     Sample(title: "✨⭐️Sample Components⭐️✨ -----", desinationView: nil),
     Sample(title: "--- CarouselCatalog-----", desinationView: AnyView(CarouselCatalog())),
     Sample(title: "--- GestureCatalog-----", desinationView: AnyView(GestureCatalog())),

@@ -6,11 +6,22 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct CatalogCategory: Identifiable {
+struct CatalogCategory: Identifiable, Hashable {
+
     let id = UUID()
     let title: String
     let subtitle: String
     let text: String
     let image: String
+    let destinationView: AnyView
+
+    static func == (lhs: CatalogCategory, rhs: CatalogCategory) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
