@@ -56,7 +56,7 @@ let sampleCatalogCategories = [
         title: "Gesture Catalog",
         subtitle: "DragGesture, LongPressGesture etc...",
         text: "Using GestureState and updating method of the default Gesture Implementations and so on.",
-        image: "Illustration 5",
+        image: "DragAndGesture",
         destinationView: AnyView(GestureCatalog())
     )
 ]

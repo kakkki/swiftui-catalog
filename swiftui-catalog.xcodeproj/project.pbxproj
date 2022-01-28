@@ -26,6 +26,7 @@
 		80A96F3527A39954001F2F5E /* CategoryFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3427A39954001F2F5E /* CategoryFeature.swift */; };
 		80A96F3827A39E63001F2F5E /* CatalogCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3727A39E63001F2F5E /* CatalogCategory.swift */; };
 		80A96F3A27A39F1A001F2F5E /* CategoryFeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3927A39F1A001F2F5E /* CategoryFeatureList.swift */; };
+		80A96F3D27A3D119001F2F5E /* DecorationCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3C27A3D119001F2F5E /* DecorationCatalog.swift */; };
 		80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */; };
 		80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */; };
 		80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43442782EA5000D9C6D1 /* AccountBackground.swift */; };
@@ -75,6 +76,7 @@
 		80A96F3427A39954001F2F5E /* CategoryFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFeature.swift; sourceTree = "<group>"; };
 		80A96F3727A39E63001F2F5E /* CatalogCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCategory.swift; sourceTree = "<group>"; };
 		80A96F3927A39F1A001F2F5E /* CategoryFeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFeatureList.swift; sourceTree = "<group>"; };
+		80A96F3C27A3D119001F2F5E /* DecorationCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationCatalog.swift; sourceTree = "<group>"; };
 		80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollViewSample.swift; sourceTree = "<group>"; };
 		80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		80EE43442782EA5000D9C6D1 /* AccountBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
@@ -137,11 +139,11 @@
 				80069494277C3CFF001458F2 /* ContentView.swift */,
 				80A96F3427A39954001F2F5E /* CategoryFeature.swift */,
 				80A96F3927A39F1A001F2F5E /* CategoryFeatureList.swift */,
-				80EE4357278AC50E00D9C6D1 /* DashedLineSample.swift */,
 				80F35C3D27925FC9006B0368 /* EditableListSample.swift */,
 				80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */,
 				80F35C432795A689006B0368 /* OverlayViewSample.swift */,
 				80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */,
+				80A96F3B27A3D0FC001F2F5E /* DecorationCatalog */,
 				80A96F3627A39E4F001F2F5E /* Model */,
 				80EE4352278992B800D9C6D1 /* GeometryReaderSamples */,
 				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
@@ -200,6 +202,15 @@
 				80A96F3727A39E63001F2F5E /* CatalogCategory.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		80A96F3B27A3D0FC001F2F5E /* DecorationCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				80EE4357278AC50E00D9C6D1 /* DashedLineSample.swift */,
+				80A96F3C27A3D119001F2F5E /* DecorationCatalog.swift */,
+			);
+			path = DecorationCatalog;
 			sourceTree = "<group>";
 		};
 		80EE433F2782E71D00D9C6D1 /* TrackableScroll */ = {
@@ -361,6 +372,7 @@
 				80F1A538278E9B8600FAF56D /* LeaningStackSample.swift in Sources */,
 				80FE046227964C7F002AE55A /* VStackSpacerLayoutSample.swift in Sources */,
 				80069495277C3CFF001458F2 /* ContentView.swift in Sources */,
+				80A96F3D27A3D119001F2F5E /* DecorationCatalog.swift in Sources */,
 				80F35C4027940A01006B0368 /* LayoutUsingSpacerSample.swift in Sources */,
 				80F35C3C2792521B006B0368 /* TaskDragSample.swift in Sources */,
 				80A96F3A27A39F1A001F2F5E /* CategoryFeatureList.swift in Sources */,
