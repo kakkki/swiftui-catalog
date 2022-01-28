@@ -25,9 +25,8 @@ struct Sample: Identifiable {
 
 let samples:[Sample] = [
     Sample(title: "--- CategoryFeatureList-----", desinationView: AnyView(CategoryFeatureList())),
-    Sample(title: "VStackSpacerLayoutSample", desinationView: AnyView(VStackSpacerLayoutSample())),
-    Sample(title: "EditableListSample", desinationView: AnyView(EditableListSample())),
-    Sample(title: "--------------------------------------", desinationView: nil),
+//    Sample(title: "VStackSpacerLayoutSample", desinationView: AnyView(VStackSpacerLayoutSample())),
+//    Sample(title: "--------------------------------------", desinationView: nil),
     Sample(title: "FeaturedItem", desinationView: AnyView(FeaturedItem())),
     Sample(title: "TabbedFeaturedItems", desinationView: AnyView(TabbedFeaturedItems())),
     Sample(title: "Rotation3DEffectTab", desinationView: AnyView(Rotation3DEffectTab())),
@@ -40,9 +39,9 @@ let samples:[Sample] = [
     Sample(title: "StackCardsAnimationSample \n 重なったカードのアニメーション", desinationView: AnyView(StackCardsAnimationSample())),
     Sample(title: "StackCardsAnimationAndDragGestureSample \n 重なったカードのアニメーション&ドラッグジェスチャー ", desinationView: AnyView(StackCardsAnimationAndDragGestureSample())),
     Sample(title: "--------------------------------------", desinationView: nil),
-    Sample(title: "DashedLineSample", desinationView: AnyView(DashedLineSample())),
-    Sample(title: "LayoutUsingSpacerSample", desinationView: AnyView(LayoutUsingSpacerSample())),
+//    Sample(title: "LayoutUsingSpacerSample", desinationView: AnyView(LayoutUsingSpacerSample())),
     Sample(title: "Overlayの検証", desinationView: AnyView(DragGestureBasic())),
+    Sample(title: "EditableListSample", desinationView: AnyView(EditableListSample())),
 ]
 
 struct ContentView_Previews: PreviewProvider {
