@@ -145,19 +145,13 @@
 				80A96F3427A39954001F2F5E /* CategoryFeature.swift */,
 				80A96F3927A39F1A001F2F5E /* CategoryFeatureList.swift */,
 				80F35C3D27925FC9006B0368 /* EditableListSample.swift */,
-				80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */,
-				80F35C432795A689006B0368 /* OverlayViewSample.swift */,
-				80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */,
 				80A96F3B27A3D0FC001F2F5E /* DecorationCatalog */,
 				8078EFB927A125FD004C2A75 /* CarouselCatalog */,
 				8078EFC027A12D77004C2A75 /* GestureCatalog */,
 				80A96F3E27A3D7FA001F2F5E /* GeometryReaderCatalog */,
 				80A96F4127A3E0C9001F2F5E /* LayoutEssenceCatalog */,
 				90AAC19927866EBD000110E4 /* design-code-samples */,
-				80EE434D2789868600D9C6D1 /* DragGestureSamples */,
 				80F1A530278E901800FAF56D /* StackLayoutCards */,
-				80FE045E27964C25002AE55A /* SampleComponents */,
-				8078EFB62797ACEC004C2A75 /* CoordinateSpaceSamples */,
 				80069496277C3D02001458F2 /* Assets.xcassets */,
 				80069498277C3D02001458F2 /* Preview Content */,
 			);
@@ -170,14 +164,6 @@
 				80069499277C3D02001458F2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		8078EFB62797ACEC004C2A75 /* CoordinateSpaceSamples */ = {
-			isa = PBXGroup;
-			children = (
-				8078EFB72797AD12004C2A75 /* CoordinateSpaceAndDragSample.swift */,
-			);
-			path = CoordinateSpaceSamples;
 			sourceTree = "<group>";
 		};
 		8078EFB927A125FD004C2A75 /* CarouselCatalog */ = {
@@ -196,6 +182,13 @@
 				80A96F2E27A133E6001F2F5E /* GestureCatalog.swift */,
 				8078EFC127A12DAE004C2A75 /* LongPressGestureSample.swift */,
 				8078EFC327A12DEF004C2A75 /* LongPressGestureSampleSecond.swift */,
+				80EE434E2789869B00D9C6D1 /* DragGestureBasic.swift */,
+				8078EFB72797AD12004C2A75 /* CoordinateSpaceAndDragSample.swift */,
+				80EE435027898D9B00D9C6D1 /* DragGestureAutoPositionChange.swift */,
+				80F35C3B2792521B006B0368 /* TaskDragSample.swift */,
+				80F35C4127940E77006B0368 /* DragGestureNotUsePosition.swift */,
+				80FE045F27964C4D002AE55A /* StackCardsDragSample.swift */,
+				80FE046327965690002AE55A /* CardsGroupSample.swift */,
 			);
 			path = GestureCatalog;
 			sourceTree = "<group>";
@@ -211,6 +204,7 @@
 		80A96F3B27A3D0FC001F2F5E /* DecorationCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				80F35C432795A689006B0368 /* OverlayViewSample.swift */,
 				80EE4357278AC50E00D9C6D1 /* DashedLineSample.swift */,
 				80A96F3C27A3D119001F2F5E /* DecorationCatalog.swift */,
 			);
@@ -235,6 +229,8 @@
 		80A96F4127A3E0C9001F2F5E /* LayoutEssenceCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */,
+				80F35C3F27940A01006B0368 /* LayoutUsingSpacerSample.swift */,
 				80A96F4227A3E0F1001F2F5E /* LayoutEssenceCatalog.swift */,
 			);
 			path = LayoutEssenceCatalog;
@@ -250,17 +246,6 @@
 			path = TrackableScroll;
 			sourceTree = "<group>";
 		};
-		80EE434D2789868600D9C6D1 /* DragGestureSamples */ = {
-			isa = PBXGroup;
-			children = (
-				80EE434E2789869B00D9C6D1 /* DragGestureBasic.swift */,
-				80EE435027898D9B00D9C6D1 /* DragGestureAutoPositionChange.swift */,
-				80F35C3B2792521B006B0368 /* TaskDragSample.swift */,
-				80F35C4127940E77006B0368 /* DragGestureNotUsePosition.swift */,
-			);
-			path = DragGestureSamples;
-			sourceTree = "<group>";
-		};
 		80F1A530278E901800FAF56D /* StackLayoutCards */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,15 +258,6 @@
 				80F1A53B278EA29000FAF56D /* AnimationUpdateSample.swift */,
 			);
 			path = StackLayoutCards;
-			sourceTree = "<group>";
-		};
-		80FE045E27964C25002AE55A /* SampleComponents */ = {
-			isa = PBXGroup;
-			children = (
-				80FE045F27964C4D002AE55A /* StackCardsDragSample.swift */,
-				80FE046327965690002AE55A /* CardsGroupSample.swift */,
-			);
-			path = SampleComponents;
 			sourceTree = "<group>";
 		};
 		90AAC19927866EBD000110E4 /* design-code-samples */ = {

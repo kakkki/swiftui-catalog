@@ -16,6 +16,7 @@ struct DecorationCatalog: View {
 
     let decorationSamples = [
         Sample(title: "--- DashedLineSample -----", desinationView: AnyView(DashedLineSample())),
+        Sample(title: "--- OverlayViewSample -----", desinationView: AnyView(OverlayViewSample())),
     ]
 }
 
