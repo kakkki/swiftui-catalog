@@ -135,6 +135,7 @@
 		80069491277C3CFF001458F2 /* swiftui-catalog */ = {
 			isa = PBXGroup;
 			children = (
+				80A96F3627A39E4F001F2F5E /* Model */,
 				80069492277C3CFF001458F2 /* SwiftUICatalogApp.swift */,
 				80069494277C3CFF001458F2 /* ContentView.swift */,
 				80A96F3427A39954001F2F5E /* CategoryFeature.swift */,
@@ -144,7 +145,8 @@
 				80F35C432795A689006B0368 /* OverlayViewSample.swift */,
 				80FE046127964C7F002AE55A /* VStackSpacerLayoutSample.swift */,
 				80A96F3B27A3D0FC001F2F5E /* DecorationCatalog */,
-				80A96F3627A39E4F001F2F5E /* Model */,
+				8078EFB927A125FD004C2A75 /* CarouselCatalog */,
+				8078EFC027A12D77004C2A75 /* GestureCatalog */,
 				80EE4352278992B800D9C6D1 /* GeometryReaderSamples */,
 				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
 				90AAC19927866EBD000110E4 /* design-code-samples */,
@@ -152,8 +154,6 @@
 				80F1A530278E901800FAF56D /* StackLayoutCards */,
 				80FE045E27964C25002AE55A /* SampleComponents */,
 				8078EFB62797ACEC004C2A75 /* CoordinateSpaceSamples */,
-				8078EFB927A125FD004C2A75 /* CarouselSamples */,
-				8078EFC027A12D77004C2A75 /* GestureCatalog */,
 				80069496277C3D02001458F2 /* Assets.xcassets */,
 				80069498277C3D02001458F2 /* Preview Content */,
 			);
@@ -176,14 +176,14 @@
 			path = CoordinateSpaceSamples;
 			sourceTree = "<group>";
 		};
-		8078EFB927A125FD004C2A75 /* CarouselSamples */ = {
+		8078EFB927A125FD004C2A75 /* CarouselCatalog */ = {
 			isa = PBXGroup;
 			children = (
 				8078EFBA27A12627004C2A75 /* CarouselCatalog.swift */,
 				8078EFBC27A12743004C2A75 /* RectangleCarousel.swift */,
 				80A96F3027A1358C001F2F5E /* InfiniteCarousel.swift */,
 			);
-			path = CarouselSamples;
+			path = CarouselCatalog;
 			sourceTree = "<group>";
 		};
 		8078EFC027A12D77004C2A75 /* GestureCatalog */ = {

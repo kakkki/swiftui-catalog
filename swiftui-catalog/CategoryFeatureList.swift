@@ -11,15 +11,12 @@ import SwiftUI
 
  GridViewを試す
  
- FirstViewをContentViewではなく、このCategoryFeatureListにする
-    ContentViewの中身をcatalogCategoriesに移植する
+    1. FirstViewをContentViewではなく、このCategoryFeatureListにする
+        ContentViewの中身をcatalogCategoriesに移植する
  
- */
-
-// next todo,
-// FirstViewをContentViewではなく、このCategoryFeatureListにする
-    // ContentViewの中身をcatalogCategoriesに移植する
-
+    2. 各CatalogはGridViewで各画面への導線を実装する
+ 
+*/
 
 /* それぞれのイメージに合うように、画像も探してAssetに登録しないと
  Gesture:
