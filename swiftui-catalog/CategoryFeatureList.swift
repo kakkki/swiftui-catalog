@@ -61,6 +61,13 @@ struct CategoryFeatureList: View {
             image: "Decoration",
             destinationView: AnyView(DecorationCatalog())
         ),
+        CatalogCategory(
+            title: "GeometryReader Catalog",
+            subtitle: "In SwiftUI, you have to use GeometryReader...",
+            text: "Using GeometryReader and Preferences etc....",
+            image: "GeometryReader",
+            destinationView: AnyView(GeometryReaderCatalog())
+        ),
     ]
 
     var body: some View {

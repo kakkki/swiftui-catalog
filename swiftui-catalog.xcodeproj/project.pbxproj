@@ -27,6 +27,7 @@
 		80A96F3827A39E63001F2F5E /* CatalogCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3727A39E63001F2F5E /* CatalogCategory.swift */; };
 		80A96F3A27A39F1A001F2F5E /* CategoryFeatureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3927A39F1A001F2F5E /* CategoryFeatureList.swift */; };
 		80A96F3D27A3D119001F2F5E /* DecorationCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3C27A3D119001F2F5E /* DecorationCatalog.swift */; };
+		80A96F4027A3D81A001F2F5E /* GeometryReaderCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3F27A3D81A001F2F5E /* GeometryReaderCatalog.swift */; };
 		80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */; };
 		80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */; };
 		80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43442782EA5000D9C6D1 /* AccountBackground.swift */; };
@@ -77,6 +78,7 @@
 		80A96F3727A39E63001F2F5E /* CatalogCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCategory.swift; sourceTree = "<group>"; };
 		80A96F3927A39F1A001F2F5E /* CategoryFeatureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFeatureList.swift; sourceTree = "<group>"; };
 		80A96F3C27A3D119001F2F5E /* DecorationCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationCatalog.swift; sourceTree = "<group>"; };
+		80A96F3F27A3D81A001F2F5E /* GeometryReaderCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderCatalog.swift; sourceTree = "<group>"; };
 		80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollViewSample.swift; sourceTree = "<group>"; };
 		80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		80EE43442782EA5000D9C6D1 /* AccountBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
@@ -147,8 +149,7 @@
 				80A96F3B27A3D0FC001F2F5E /* DecorationCatalog */,
 				8078EFB927A125FD004C2A75 /* CarouselCatalog */,
 				8078EFC027A12D77004C2A75 /* GestureCatalog */,
-				80EE4352278992B800D9C6D1 /* GeometryReaderSamples */,
-				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
+				80A96F3E27A3D7FA001F2F5E /* GeometryReaderCatalog */,
 				90AAC19927866EBD000110E4 /* design-code-samples */,
 				80EE434D2789868600D9C6D1 /* DragGestureSamples */,
 				80F1A530278E901800FAF56D /* StackLayoutCards */,
@@ -213,6 +214,21 @@
 			path = DecorationCatalog;
 			sourceTree = "<group>";
 		};
+		80A96F3E27A3D7FA001F2F5E /* GeometryReaderCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				80A96F3F27A3D81A001F2F5E /* GeometryReaderCatalog.swift */,
+				800694A0277C3F31001458F2 /* SyncColumnWidthSample.swift */,
+				800694A2277C4AC9001458F2 /* GeometryPreferenceSample.swift */,
+				800694A4277C4BB2001458F2 /* AnchorPreferenceSample.swift */,
+				800694A6277C4C83001458F2 /* NestedViewPreferenceSample.swift */,
+				80EE43532789933600D9C6D1 /* SetPositionToCenterExample.swift */,
+				80EE4355278A9F2800D9C6D1 /* PositionChangeExample.swift */,
+				80EE433F2782E71D00D9C6D1 /* TrackableScroll */,
+			);
+			path = GeometryReaderCatalog;
+			sourceTree = "<group>";
+		};
 		80EE433F2782E71D00D9C6D1 /* TrackableScroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,19 +248,6 @@
 				80F35C4127940E77006B0368 /* DragGestureNotUsePosition.swift */,
 			);
 			path = DragGestureSamples;
-			sourceTree = "<group>";
-		};
-		80EE4352278992B800D9C6D1 /* GeometryReaderSamples */ = {
-			isa = PBXGroup;
-			children = (
-				800694A0277C3F31001458F2 /* SyncColumnWidthSample.swift */,
-				800694A2277C4AC9001458F2 /* GeometryPreferenceSample.swift */,
-				800694A4277C4BB2001458F2 /* AnchorPreferenceSample.swift */,
-				800694A6277C4C83001458F2 /* NestedViewPreferenceSample.swift */,
-				80EE43532789933600D9C6D1 /* SetPositionToCenterExample.swift */,
-				80EE4355278A9F2800D9C6D1 /* PositionChangeExample.swift */,
-			);
-			path = GeometryReaderSamples;
 			sourceTree = "<group>";
 		};
 		80F1A530278E901800FAF56D /* StackLayoutCards */ = {
@@ -399,6 +402,7 @@
 				80A96F3527A39954001F2F5E /* CategoryFeature.swift in Sources */,
 				8078EFC427A12DEF004C2A75 /* LongPressGestureSampleSecond.swift in Sources */,
 				800694A5277C4BB2001458F2 /* AnchorPreferenceSample.swift in Sources */,
+				80A96F4027A3D81A001F2F5E /* GeometryReaderCatalog.swift in Sources */,
 				80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */,
 				8078EFB82797AD12004C2A75 /* CoordinateSpaceAndDragSample.swift in Sources */,
 				806F8C7F27912B64009651D6 /* TextCardsStackSample.swift in Sources */,

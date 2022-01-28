@@ -25,15 +25,6 @@ struct Sample: Identifiable {
 
 let samples:[Sample] = [
     Sample(title: "--- CategoryFeatureList-----", desinationView: AnyView(CategoryFeatureList())),
-    Sample(title: "--- 🗺GeometryReader🗺 ----------", desinationView: nil),
-    Sample(title: "SyncColumnWidthSample", desinationView: AnyView(SyncColumnWidthSample())),
-    Sample(title: "GeometryPreferenceSample", desinationView: AnyView(GeometryPreferenceSample())),
-    Sample(title: "AnchorPreferenceSample", desinationView: AnyView(AnchorPreferenceSample())),
-    Sample(title: "NestedViewPreferenceSample", desinationView: AnyView(NestedViewPreferenceSample())),
-    Sample(title: "SetPositionToCenterExample", desinationView: AnyView(SetPositionToCenterExample())),
-    Sample(title: "PositionChangeExample", desinationView: AnyView(PositionChangeExample())),
-    Sample(title: "TrackableScrollViewSample todo implement", desinationView: AnyView(TrackableScrollViewSample())),
-    Sample(title: "---汎用的-----------------------------------", desinationView: nil),
     Sample(title: "VStackSpacerLayoutSample", desinationView: AnyView(VStackSpacerLayoutSample())),
     Sample(title: "EditableListSample", desinationView: AnyView(EditableListSample())),
     Sample(title: "--------------------------------------", desinationView: nil),
