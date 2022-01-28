@@ -17,6 +17,13 @@ struct GestureCatalog: View {
     let gestureSamples = [
         Sample(title: "--- LongPressGestureSample -----", desinationView: AnyView(LongPressGestureSample())),
         Sample(title: "--- LongPressGestureSampleSecond -----", desinationView: AnyView(LongPressGestureSampleSecond())),
+        Sample(title: "StackCardsDragSample\nスタックしてるカードをタップしてドラッグする部品ができた -----", desinationView: AnyView(StackCardsDragSample())),
+        Sample(title: "CardsGroupSample\n展開するカードのグループパーツ", desinationView: AnyView(CardsGroupSample())),
+        Sample(title: "DragGesture Basic", desinationView: AnyView(DragGestureBasic())),
+        Sample(title: "DragGestureAutoPositionChange \n AnchorPreferenceによる座標取得とドラッグジェスチャーでの座標による制御処理", desinationView: AnyView(DragGestureAutoPositionChange())),
+        Sample(title: "positionを使わないことでコンテンツサイズを超える大きさでの領域で描画されるのを防ぐ", desinationView: AnyView(DragGestureNotUsePosition())),
+        Sample(title: "TaskDragSample", desinationView: AnyView(TaskDragSample())),
+        Sample(title: "CoordinateSpaceAndDragSample", desinationView: AnyView(CoordinateSpaceAndDragSample())),
     ]
 }
 
