@@ -75,6 +75,13 @@ struct CategoryFeatureList: View {
             image: "Layout",
             destinationView: AnyView(LayoutEssenceCatalog())
         ),
+        CatalogCategory(
+            title: "DesignCode Catalog",
+            subtitle: "designcode.io examples",
+            text: "GeometryReader, TrackableScrollView, etc...",
+            image: "Illustration 5",
+            destinationView: AnyView(DesignCodeCatalog())
+        ),
     ]
 
     var body: some View {

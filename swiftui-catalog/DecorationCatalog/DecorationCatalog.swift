@@ -15,8 +15,10 @@ struct DecorationCatalog: View {
     }
 
     let decorationSamples = [
-        Sample(title: "--- DashedLineSample -----", desinationView: AnyView(DashedLineSample())),
-        Sample(title: "--- OverlayViewSample -----", desinationView: AnyView(OverlayViewSample())),
+        Sample(title: "DashedLineSample", desinationView: AnyView(DashedLineSample())),
+        Sample(title: "OverlayViewSample", desinationView: AnyView(OverlayViewSample())),
+        Sample(title: "EditableListSample", desinationView: AnyView(EditableListSample())),
+        Sample(title: "Replace Animation API from iOS15", desinationView: AnyView(AnimationUpdateSample())),
     ]
 }
 
