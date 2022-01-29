@@ -7,37 +7,6 @@
 
 import SwiftUI
 
-/** next todo
-
- GridViewを試す
- 
-    1. FirstViewをContentViewではなく、このCategoryFeatureListにする
-        ContentViewの中身をcatalogCategoriesに移植する
- 
-    2. 各CatalogはGridViewで各画面への導線を実装する
- 
-*/
-
-/* それぞれのイメージに合うように、画像も探してAssetに登録しないと
- Gesture:
- 
- Carousel:
- 
- GeometryReader:
- 
- Decoration:
-    DashedLine
-    
- Layout Essence:
-    LayoutUsingSpacer
-    VStackSpacerLayoutSample
-    OverlayViewSample
- 
- 未分類:
-    EditableListSample
- 
- */
-
 struct CategoryFeatureList: View {
     let catalogCategories = [
         CatalogCategory(
