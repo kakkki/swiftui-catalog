@@ -82,6 +82,13 @@ struct CategoryFeatureList: View {
             image: "Illustration 5",
             destinationView: AnyView(DesignCodeCatalog())
         ),
+        CatalogCategory(
+            title: "StackCard Catalog",
+            subtitle: "Stack Cards examples",
+            text: "offset, rotation3DEffect, etc...",
+            image: "StackCards",
+            destinationView: AnyView(DesignCodeCatalog())
+        ),
     ]
 
     var body: some View {

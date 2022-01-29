@@ -25,13 +25,13 @@ struct Sample: Identifiable {
 
 let samples:[Sample] = [
     Sample(title: "--- CategoryFeatureList-----", desinationView: AnyView(CategoryFeatureList())),
-    Sample(title: "--------------------------------------", desinationView: nil),
-    Sample(title: "LeaningCardSample \n 斜めのカードUI", desinationView: AnyView(LeaningCardSample())),
-    Sample(title: "StackLayoutSample\n 重なったカードUI", desinationView: AnyView(StackLayoutSample())),
-    Sample(title: "LeaningStackSample\n 斜めのカードが重なったUI", desinationView: AnyView(LeaningStackSample())),
-    Sample(title: "TextCardsStackSample\n 斜めのテキストカードが重なったUI", desinationView: AnyView(TextCardsStackSample())),
-    Sample(title: "StackCardsAnimationSample \n 重なったカードのアニメーション", desinationView: AnyView(StackCardsAnimationSample())),
-    Sample(title: "StackCardsAnimationAndDragGestureSample \n 重なったカードのアニメーション&ドラッグジェスチャー ", desinationView: AnyView(StackCardsAnimationAndDragGestureSample())),
+//    Sample(title: "--------------------------------------", desinationView: nil),
+//    Sample(title: "LeaningCardSample \n 斜めのカードUI", desinationView: AnyView(LeaningCardSample())),
+//    Sample(title: "StackLayoutSample\n 重なったカードUI", desinationView: AnyView(StackLayoutSample())),
+//    Sample(title: "LeaningStackSample\n 斜めのカードが重なったUI", desinationView: AnyView(LeaningStackSample())),
+//    Sample(title: "TextCardsStackSample\n 斜めのテキストカードが重なったUI", desinationView: AnyView(TextCardsStackSample())),
+//    Sample(title: "StackCardsAnimationSample \n 重なったカードのアニメーション", desinationView: AnyView(StackCardsAnimationSample())),
+//    Sample(title: "StackCardsAnimationAndDragGestureSample \n 重なったカードのアニメーション&ドラッグジェスチャー ", desinationView: AnyView(StackCardsAnimationAndDragGestureSample())),
 ]
 
 struct ContentView_Previews: PreviewProvider {

@@ -30,6 +30,7 @@
 		80A96F4027A3D81A001F2F5E /* GeometryReaderCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F3F27A3D81A001F2F5E /* GeometryReaderCatalog.swift */; };
 		80A96F4327A3E0F1001F2F5E /* LayoutEssenceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F4227A3E0F1001F2F5E /* LayoutEssenceCatalog.swift */; };
 		80A96F4527A50316001F2F5E /* DesignCodeCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F4427A50316001F2F5E /* DesignCodeCatalog.swift */; };
+		80A96F4727A506CE001F2F5E /* StackCardCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A96F4627A506CE001F2F5E /* StackCardCatalog.swift */; };
 		80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */; };
 		80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */; };
 		80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43442782EA5000D9C6D1 /* AccountBackground.swift */; };
@@ -83,6 +84,7 @@
 		80A96F3F27A3D81A001F2F5E /* GeometryReaderCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderCatalog.swift; sourceTree = "<group>"; };
 		80A96F4227A3E0F1001F2F5E /* LayoutEssenceCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutEssenceCatalog.swift; sourceTree = "<group>"; };
 		80A96F4427A50316001F2F5E /* DesignCodeCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeCatalog.swift; sourceTree = "<group>"; };
+		80A96F4627A506CE001F2F5E /* StackCardCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardCatalog.swift; sourceTree = "<group>"; };
 		80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollViewSample.swift; sourceTree = "<group>"; };
 		80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		80EE43442782EA5000D9C6D1 /* AccountBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
@@ -152,7 +154,7 @@
 				80A96F3E27A3D7FA001F2F5E /* GeometryReaderCatalog */,
 				80A96F4127A3E0C9001F2F5E /* LayoutEssenceCatalog */,
 				90AAC19927866EBD000110E4 /* DesignCodeCatalog */,
-				80F1A530278E901800FAF56D /* StackLayoutCards */,
+				80F1A530278E901800FAF56D /* StackCardCatalog */,
 				80069496277C3D02001458F2 /* Assets.xcassets */,
 				80069498277C3D02001458F2 /* Preview Content */,
 			);
@@ -249,7 +251,7 @@
 			path = TrackableScroll;
 			sourceTree = "<group>";
 		};
-		80F1A530278E901800FAF56D /* StackLayoutCards */ = {
+		80F1A530278E901800FAF56D /* StackCardCatalog */ = {
 			isa = PBXGroup;
 			children = (
 				80F1A533278E99C800FAF56D /* LeaningCardSample.swift */,
@@ -258,8 +260,9 @@
 				806F8C7E27912B64009651D6 /* TextCardsStackSample.swift */,
 				80F1A539278E9E3300FAF56D /* StackCardsAnimationSample.swift */,
 				80F1A53D278EB03F00FAF56D /* StackCardsAnimationAndDragGestureSample.swift */,
+				80A96F4627A506CE001F2F5E /* StackCardCatalog.swift */,
 			);
-			path = StackLayoutCards;
+			path = StackCardCatalog;
 			sourceTree = "<group>";
 		};
 		90AAC19927866EBD000110E4 /* DesignCodeCatalog */ = {
@@ -372,6 +375,7 @@
 				80069493277C3CFF001458F2 /* SwiftUICatalogApp.swift in Sources */,
 				90AAC19B27866F3F000110E4 /* Course.swift in Sources */,
 				80A96F3827A39E63001F2F5E /* CatalogCategory.swift in Sources */,
+				80A96F4727A506CE001F2F5E /* StackCardCatalog.swift in Sources */,
 				80EE434A27897D1F00D9C6D1 /* TabbedFeaturedItems.swift in Sources */,
 				8078EFC227A12DAE004C2A75 /* LongPressGestureSample.swift in Sources */,
 				80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */,
