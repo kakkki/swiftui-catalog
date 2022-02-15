@@ -19,6 +19,8 @@ struct DecorationCatalog: View {
         Sample(title: "OverlayViewSample", desinationView: AnyView(OverlayViewSample())),
         Sample(title: "EditableListSample", desinationView: AnyView(EditableListSample())),
         Sample(title: "Replace Animation API from iOS15", desinationView: AnyView(AnimationUpdateSample())),
+        Sample(title: "SelectableTextSample", desinationView: AnyView(SelectableTextSample())),
+
     ]
 }
 
