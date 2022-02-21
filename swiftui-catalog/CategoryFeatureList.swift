@@ -10,6 +10,13 @@ import SwiftUI
 struct CategoryFeatureList: View {
     let catalogCategories = [
         CatalogCategory(
+            title: "DataManagement Catalog",
+            subtitle: "UserDefault Binding, etc...",
+            text: "Combine? Swift Concurrency? ...",
+            image: "",
+            destinationView: AnyView(DataManagementCatalog())
+        ),
+        CatalogCategory(
             title: "Gesture Catalog",
             subtitle: "DragGesture, LongPressGesture etc...",
             text: "Using GestureState and updating method of the default Gesture Implementations and so on.",
