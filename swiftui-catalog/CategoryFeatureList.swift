@@ -10,6 +10,13 @@ import SwiftUI
 struct CategoryFeatureList: View {
     let catalogCategories = [
         CatalogCategory(
+            title: "SwiftExercise Catalog",
+            subtitle: "escaping, subscript etc...",
+            text: "",
+            image: "",
+            destinationView: AnyView(SwiftExerciseCatalog())
+        ),
+        CatalogCategory(
             title: "DataManagement Catalog",
             subtitle: "UserDefault Binding, etc...",
             text: "Combine? Swift Concurrency? ...",

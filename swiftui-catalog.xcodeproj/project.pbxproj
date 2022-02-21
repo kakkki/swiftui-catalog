@@ -40,6 +40,8 @@
 		80C8817F27C0A044001D1F35 /* SubscriptSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8817E27C0A044001D1F35 /* SubscriptSample.swift */; };
 		80C8818127C0B523001D1F35 /* KeyPathSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818027C0B523001D1F35 /* KeyPathSample.swift */; };
 		80C8818327C32480001D1F35 /* UserDefaultsWithTextFieldSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818227C32480001D1F35 /* UserDefaultsWithTextFieldSample.swift */; };
+		80C8818627C3923F001D1F35 /* SwiftExerciseCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818527C3923F001D1F35 /* SwiftExerciseCatalog.swift */; };
+		80C8818827C392AF001D1F35 /* EscapingSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818727C392AF001D1F35 /* EscapingSamples.swift */; };
 		80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */; };
 		80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */; };
 		80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43442782EA5000D9C6D1 /* AccountBackground.swift */; };
@@ -103,6 +105,8 @@
 		80C8817E27C0A044001D1F35 /* SubscriptSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptSample.swift; sourceTree = "<group>"; };
 		80C8818027C0B523001D1F35 /* KeyPathSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathSample.swift; sourceTree = "<group>"; };
 		80C8818227C32480001D1F35 /* UserDefaultsWithTextFieldSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWithTextFieldSample.swift; sourceTree = "<group>"; };
+		80C8818527C3923F001D1F35 /* SwiftExerciseCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseCatalog.swift; sourceTree = "<group>"; };
+		80C8818727C392AF001D1F35 /* EscapingSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingSamples.swift; sourceTree = "<group>"; };
 		80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollViewSample.swift; sourceTree = "<group>"; };
 		80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		80EE43442782EA5000D9C6D1 /* AccountBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				80069492277C3CFF001458F2 /* SwiftUICatalogApp.swift */,
 				80A96F3927A39F1A001F2F5E /* CategoryFeatureList.swift */,
 				80A96F3427A39954001F2F5E /* CategoryFeature.swift */,
+				80C8818427C39225001D1F35 /* SwiftExerciseCatalog */,
 				805EA50D27BFAA0C007A33A6 /* DataManagementCatalog */,
 				80A96F3B27A3D0FC001F2F5E /* DecorationCatalog */,
 				8078EFB927A125FD004C2A75 /* CarouselCatalog */,
@@ -274,6 +279,15 @@
 				80A96F4227A3E0F1001F2F5E /* LayoutEssenceCatalog.swift */,
 			);
 			path = LayoutEssenceCatalog;
+			sourceTree = "<group>";
+		};
+		80C8818427C39225001D1F35 /* SwiftExerciseCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				80C8818527C3923F001D1F35 /* SwiftExerciseCatalog.swift */,
+				80C8818727C392AF001D1F35 /* EscapingSamples.swift */,
+			);
+			name = SwiftExerciseCatalog;
 			sourceTree = "<group>";
 		};
 		80EE433F2782E71D00D9C6D1 /* TrackableScroll */ = {
@@ -405,6 +419,7 @@
 				80A96F3D27A3D119001F2F5E /* DecorationCatalog.swift in Sources */,
 				80F35C4027940A01006B0368 /* LayoutUsingSpacerSample.swift in Sources */,
 				80F35C3C2792521B006B0368 /* TaskDragSample.swift in Sources */,
+				80C8818627C3923F001D1F35 /* SwiftExerciseCatalog.swift in Sources */,
 				80A96F3A27A39F1A001F2F5E /* CategoryFeatureList.swift in Sources */,
 				80069493277C3CFF001458F2 /* SwiftUICatalogApp.swift in Sources */,
 				90AAC19B27866F3F000110E4 /* Course.swift in Sources */,
@@ -422,6 +437,7 @@
 				80A96F3127A1358C001F2F5E /* InfiniteCarousel.swift in Sources */,
 				80C8817B27C098AF001D1F35 /* PropertyWrapperSample.swift in Sources */,
 				80C8818127C0B523001D1F35 /* KeyPathSample.swift in Sources */,
+				80C8818827C392AF001D1F35 /* EscapingSamples.swift in Sources */,
 				805EA50F27BFAA24007A33A6 /* DataManagementCatalog.swift in Sources */,
 				800694A7277C4C83001458F2 /* NestedViewPreferenceSample.swift in Sources */,
 				80F35C3E27925FC9006B0368 /* EditableListSample.swift in Sources */,

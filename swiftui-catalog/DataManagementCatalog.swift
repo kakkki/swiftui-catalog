@@ -22,7 +22,8 @@ struct DataManagementCatalog: View {
         Sample(title: "PropertyWrapperSample", desinationView: AnyView(PropertyWrapperSample())),
         Sample(title: "SubscriptSample", desinationView: AnyView(SubscriptSample())),
         Sample(title: "SE-0252: DynamicMemberLookUpExample with KeyPath", desinationView: AnyView(DynamicMemberLookUpExample())),
-    ]}
+    ]
+}
 
 struct DataManagementCatalog_Previews: PreviewProvider {
     static var previews: some View {
