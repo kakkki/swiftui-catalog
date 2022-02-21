@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// @see https://qiita.com/mishimay/items/1232dbfe8208e77ed10e
 struct EscapingSamples: View {
     var body: some View {
         VStack {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIVisualEffects
 
 struct TrackableScrollViewSample: View {
     @State private var contentOffset = CGFloat(0)
@@ -17,11 +18,22 @@ struct TrackableScrollViewSample: View {
             }) {
                 Text("Hello, world!")
             }
-            VisualEffectBlur(blurStyle: .systemMaterial)
+
+            // SwiftUIVisualEffectsを利用した例
+            Rectangle()
+                .frame(width: .infinity)
                 .opacity(contentOffset < -16 ? 1 : 0)
                 .animation(.easeIn)
                 .ignoresSafeArea()
                 .frame(height: 0)
+                .vibrancyEffect()
+                .vibrancyEffectStyle(.fill)
+
+//            VisualEffectBlur(blurStyle: .systemMaterial)
+//                .opacity(contentOffset < -16 ? 1 : 0)
+//                .animation(.easeIn)
+//                .ignoresSafeArea()
+//                .frame(height: 0)
             // ignoresSafeArea とheight0によって、
             // ContentエリアはVisualEffectBlurが適用されない
             // その結果ステータスバーのみにエフェクトがかかる

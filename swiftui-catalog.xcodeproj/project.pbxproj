@@ -42,6 +42,7 @@
 		80C8818327C32480001D1F35 /* UserDefaultsWithTextFieldSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818227C32480001D1F35 /* UserDefaultsWithTextFieldSample.swift */; };
 		80C8818627C3923F001D1F35 /* SwiftExerciseCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818527C3923F001D1F35 /* SwiftExerciseCatalog.swift */; };
 		80C8818827C392AF001D1F35 /* EscapingSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818727C392AF001D1F35 /* EscapingSamples.swift */; };
+		80C8818B27C39E18001D1F35 /* SwiftUIVisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 80C8818A27C39E18001D1F35 /* SwiftUIVisualEffects */; };
 		80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */; };
 		80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */; };
 		80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43442782EA5000D9C6D1 /* AccountBackground.swift */; };
@@ -140,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C8818B27C39E18001D1F35 /* SwiftUIVisualEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +360,9 @@
 			dependencies = (
 			);
 			name = "swiftui-catalog";
+			packageProductDependencies = (
+				80C8818A27C39E18001D1F35 /* SwiftUIVisualEffects */,
+			);
 			productName = "swiftui-dictionary";
 			productReference = 8006948F277C3CFF001458F2 /* swiftui-catalog.app */;
 			productType = "com.apple.product-type.application";
@@ -386,6 +391,9 @@
 				Base,
 			);
 			mainGroup = 80069486277C3CFF001458F2;
+			packageReferences = (
+				80C8818927C39E18001D1F35 /* XCRemoteSwiftPackageReference "swiftui-visual-effects" */,
+			);
 			productRefGroup = 80069490277C3CFF001458F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -671,6 +679,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80C8818927C39E18001D1F35 /* XCRemoteSwiftPackageReference "swiftui-visual-effects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lucasbrown/swiftui-visual-effects.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80C8818A27C39E18001D1F35 /* SwiftUIVisualEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80C8818927C39E18001D1F35 /* XCRemoteSwiftPackageReference "swiftui-visual-effects" */;
+			productName = SwiftUIVisualEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80069487277C3CFF001458F2 /* Project object */;
 }
