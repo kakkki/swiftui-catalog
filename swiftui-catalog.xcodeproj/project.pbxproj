@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80058DA22A69100600B206AA /* ModalSheetSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80058DA12A69100600B206AA /* ModalSheetSample.swift */; };
+		80058DA72A69741800B206AA /* CVSPaymentMethodInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80058DA62A69741800B206AA /* CVSPaymentMethodInfoCell.swift */; };
+		80058DA92A6978EC00B206AA /* BankTransferPaymentMethodInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80058DA82A6978EC00B206AA /* BankTransferPaymentMethodInfoCell.swift */; };
 		80069493277C3CFF001458F2 /* SwiftUICatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80069492277C3CFF001458F2 /* SwiftUICatalogApp.swift */; };
 		80069497277C3D02001458F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80069496277C3D02001458F2 /* Assets.xcassets */; };
 		8006949A277C3D02001458F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80069499277C3D02001458F2 /* Preview Assets.xcassets */; };
@@ -43,6 +46,10 @@
 		80C8818627C3923F001D1F35 /* SwiftExerciseCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818527C3923F001D1F35 /* SwiftExerciseCatalog.swift */; };
 		80C8818827C392AF001D1F35 /* EscapingSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8818727C392AF001D1F35 /* EscapingSamples.swift */; };
 		80C8818B27C39E18001D1F35 /* SwiftUIVisualEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 80C8818A27C39E18001D1F35 /* SwiftUIVisualEffects */; };
+		80D63AA02B7CA062001D593D /* ImageAverageColorLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D63A9F2B7CA062001D593D /* ImageAverageColorLoader.swift */; };
+		80D7AE692B70E206003D5095 /* HomeRecommendedShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D7AE682B70E206003D5095 /* HomeRecommendedShopCell.swift */; };
+		80D7AE6B2B712040003D5095 /* AverageColorImageWithCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D7AE6A2B712040003D5095 /* AverageColorImageWithCombine.swift */; };
+		80D7AE6D2B71247B003D5095 /* AverageColorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D7AE6C2B71247B003D5095 /* AverageColorImage.swift */; };
 		80EE43412782E73D00D9C6D1 /* TrackableScrollViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */; };
 		80EE43432782E75100D9C6D1 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */; };
 		80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE43442782EA5000D9C6D1 /* AccountBackground.swift */; };
@@ -72,6 +79,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80058DA12A69100600B206AA /* ModalSheetSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetSample.swift; sourceTree = "<group>"; };
+		80058DA62A69741800B206AA /* CVSPaymentMethodInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVSPaymentMethodInfoCell.swift; sourceTree = "<group>"; };
+		80058DA82A6978EC00B206AA /* BankTransferPaymentMethodInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTransferPaymentMethodInfoCell.swift; sourceTree = "<group>"; };
 		8006948F277C3CFF001458F2 /* swiftui-catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80069492277C3CFF001458F2 /* SwiftUICatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICatalogApp.swift; sourceTree = "<group>"; };
 		80069496277C3D02001458F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +118,10 @@
 		80C8818227C32480001D1F35 /* UserDefaultsWithTextFieldSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWithTextFieldSample.swift; sourceTree = "<group>"; };
 		80C8818527C3923F001D1F35 /* SwiftExerciseCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExerciseCatalog.swift; sourceTree = "<group>"; };
 		80C8818727C392AF001D1F35 /* EscapingSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingSamples.swift; sourceTree = "<group>"; };
+		80D63A9F2B7CA062001D593D /* ImageAverageColorLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAverageColorLoader.swift; sourceTree = "<group>"; };
+		80D7AE682B70E206003D5095 /* HomeRecommendedShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendedShopCell.swift; sourceTree = "<group>"; };
+		80D7AE6A2B712040003D5095 /* AverageColorImageWithCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageColorImageWithCombine.swift; sourceTree = "<group>"; };
+		80D7AE6C2B71247B003D5095 /* AverageColorImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageColorImage.swift; sourceTree = "<group>"; };
 		80EE43402782E73D00D9C6D1 /* TrackableScrollViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollViewSample.swift; sourceTree = "<group>"; };
 		80EE43422782E75100D9C6D1 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		80EE43442782EA5000D9C6D1 /* AccountBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
@@ -148,6 +162,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80058DA52A6973E600B206AA /* BankTransferPJExample */ = {
+			isa = PBXGroup;
+			children = (
+				80058DA12A69100600B206AA /* ModalSheetSample.swift */,
+				80058DA62A69741800B206AA /* CVSPaymentMethodInfoCell.swift */,
+				80058DA82A6978EC00B206AA /* BankTransferPaymentMethodInfoCell.swift */,
+			);
+			path = BankTransferPJExample;
+			sourceTree = "<group>";
+		};
 		80069486277C3CFF001458F2 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +191,7 @@
 		80069491277C3CFF001458F2 /* swiftui-catalog */ = {
 			isa = PBXGroup;
 			children = (
+				80D7AE6E2B712480003D5095 /* HomeRenewalExample */,
 				80A96F3627A39E4F001F2F5E /* Model */,
 				80069492277C3CFF001458F2 /* SwiftUICatalogApp.swift */,
 				80A96F3927A39F1A001F2F5E /* CategoryFeatureList.swift */,
@@ -292,6 +317,17 @@
 			name = SwiftExerciseCatalog;
 			sourceTree = "<group>";
 		};
+		80D7AE6E2B712480003D5095 /* HomeRenewalExample */ = {
+			isa = PBXGroup;
+			children = (
+				80D7AE682B70E206003D5095 /* HomeRecommendedShopCell.swift */,
+				80D7AE6A2B712040003D5095 /* AverageColorImageWithCombine.swift */,
+				80D7AE6C2B71247B003D5095 /* AverageColorImage.swift */,
+				80D63A9F2B7CA062001D593D /* ImageAverageColorLoader.swift */,
+			);
+			path = HomeRenewalExample;
+			sourceTree = "<group>";
+		};
 		80EE433F2782E71D00D9C6D1 /* TrackableScroll */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +341,7 @@
 		80F1A530278E901800FAF56D /* StackCardCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				80058DA52A6973E600B206AA /* BankTransferPJExample */,
 				80F1A533278E99C800FAF56D /* LeaningCardSample.swift */,
 				80F1A531278E919F00FAF56D /* StackLayoutSample.swift */,
 				80F1A537278E9B8600FAF56D /* LeaningStackSample.swift */,
@@ -422,6 +459,7 @@
 			files = (
 				80F1A534278E99C800FAF56D /* LeaningCardSample.swift in Sources */,
 				80F1A53C278EA29000FAF56D /* AnimationUpdateSample.swift in Sources */,
+				80D7AE692B70E206003D5095 /* HomeRecommendedShopCell.swift in Sources */,
 				80F1A538278E9B8600FAF56D /* LeaningStackSample.swift in Sources */,
 				80FE046227964C7F002AE55A /* VStackSpacerLayoutSample.swift in Sources */,
 				80A96F3D27A3D119001F2F5E /* DecorationCatalog.swift in Sources */,
@@ -432,6 +470,7 @@
 				80069493277C3CFF001458F2 /* SwiftUICatalogApp.swift in Sources */,
 				90AAC19B27866F3F000110E4 /* Course.swift in Sources */,
 				80C8818327C32480001D1F35 /* UserDefaultsWithTextFieldSample.swift in Sources */,
+				80058DA92A6978EC00B206AA /* BankTransferPaymentMethodInfoCell.swift in Sources */,
 				805EA50C27BB8471007A33A6 /* SelectableTextSample.swift in Sources */,
 				80A96F3827A39E63001F2F5E /* CatalogCategory.swift in Sources */,
 				80A96F4727A506CE001F2F5E /* StackCardCatalog.swift in Sources */,
@@ -445,6 +484,7 @@
 				80A96F3127A1358C001F2F5E /* InfiniteCarousel.swift in Sources */,
 				80C8817B27C098AF001D1F35 /* PropertyWrapperSample.swift in Sources */,
 				80C8818127C0B523001D1F35 /* KeyPathSample.swift in Sources */,
+				80058DA22A69100600B206AA /* ModalSheetSample.swift in Sources */,
 				80C8818827C392AF001D1F35 /* EscapingSamples.swift in Sources */,
 				805EA50F27BFAA24007A33A6 /* DataManagementCatalog.swift in Sources */,
 				800694A7277C4C83001458F2 /* NestedViewPreferenceSample.swift in Sources */,
@@ -454,12 +494,14 @@
 				90AAC19D27866FEA000110E4 /* FeaturedItem.swift in Sources */,
 				80F35C442795A689006B0368 /* OverlayViewSample.swift in Sources */,
 				80A96F4927A5083F001F2F5E /* Sample.swift in Sources */,
+				80058DA72A69741800B206AA /* CVSPaymentMethodInfoCell.swift in Sources */,
 				80EE4358278AC50E00D9C6D1 /* DashedLineSample.swift in Sources */,
 				80EE43542789933600D9C6D1 /* SetPositionToCenterExample.swift in Sources */,
 				80EE434F2789869B00D9C6D1 /* DragGestureBasic.swift in Sources */,
 				80F1A53A278E9E3300FAF56D /* StackCardsAnimationSample.swift in Sources */,
 				805EA51127BFAA7C007A33A6 /* UserDefaultWithCombineSample.swift in Sources */,
 				80EE434C27897ECD00D9C6D1 /* Rotation3DEffectTab.swift in Sources */,
+				80D7AE6B2B712040003D5095 /* AverageColorImageWithCombine.swift in Sources */,
 				800694A1277C3F31001458F2 /* SyncColumnWidthSample.swift in Sources */,
 				80A96F3527A39954001F2F5E /* CategoryFeature.swift in Sources */,
 				8078EFC427A12DEF004C2A75 /* LongPressGestureSampleSecond.swift in Sources */,
@@ -467,7 +509,9 @@
 				80A96F4027A3D81A001F2F5E /* GeometryReaderCatalog.swift in Sources */,
 				80EE43452782EA5000D9C6D1 /* AccountBackground.swift in Sources */,
 				805EA51327BFB1ED007A33A6 /* PublishedUpdateViewBody.swift in Sources */,
+				80D7AE6D2B71247B003D5095 /* AverageColorImage.swift in Sources */,
 				8078EFB82797AD12004C2A75 /* CoordinateSpaceAndDragSample.swift in Sources */,
+				80D63AA02B7CA062001D593D /* ImageAverageColorLoader.swift in Sources */,
 				806F8C7F27912B64009651D6 /* TextCardsStackSample.swift in Sources */,
 				80A96F2F27A133E6001F2F5E /* GestureCatalog.swift in Sources */,
 				80EE4356278A9F2900D9C6D1 /* PositionChangeExample.swift in Sources */,
@@ -609,6 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftui-catalog/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -637,6 +682,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftui-catalog/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

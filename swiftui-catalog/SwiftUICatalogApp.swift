@@ -11,7 +11,17 @@ import SwiftUI
 struct SwiftUICatalogApp: App {
     var body: some Scene {
         WindowGroup {
-            CategoryFeatureList()
+            if #available(iOS 16.0, *) {
+                NavigationStack {
+                    CategoryFeatureList()
+                        .navigationTitle("SwiftUICatalogApp")
+                }
+            } else {
+                // Fallback on earlier versions
+                CategoryFeatureList()
+                    .navigationTitle("SwiftUICatalogApp")
+            }
+//            HomeRecommendedShopView()
         }
     }
 }

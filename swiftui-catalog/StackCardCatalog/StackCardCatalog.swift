@@ -15,6 +15,8 @@ struct StackCardCatalog: View {
     }
     
     let stackCardSamples = [
+        Sample(title: "CVSPaymentMethodInfoCell \nサンプル実装", desinationView: AnyView(CVSPaymentMethodInfoCell())),
+
         Sample(title: "LeaningCardSample \n 斜めのカードUI", desinationView: AnyView(LeaningCardSample())),
         Sample(title: "StackLayoutSample\n 重なったカードUI", desinationView: AnyView(StackLayoutSample())),
         Sample(title: "LeaningStackSample\n 斜めのカードが重なったUI", desinationView: AnyView(LeaningStackSample())),

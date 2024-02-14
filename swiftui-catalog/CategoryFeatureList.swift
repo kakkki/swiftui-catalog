@@ -70,7 +70,7 @@ struct CategoryFeatureList: View {
             subtitle: "Stack Cards examples",
             text: "offset, rotation3DEffect, etc...",
             image: "StackCards",
-            destinationView: AnyView(DesignCodeCatalog())
+            destinationView: AnyView(StackCardCatalog())
         ),
     ]
 
